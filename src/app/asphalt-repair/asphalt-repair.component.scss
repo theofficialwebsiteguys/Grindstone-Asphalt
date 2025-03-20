@@ -1,0 +1,147 @@
+
+// Custom Section Styling
+.custom-section {
+  padding: 60px 20%;
+}
+
+// Before & After Slider Styling
+.comparison-slider-container {
+  background: white;
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.comparison-slider {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.comparison-img {
+  width: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+// Services Section with Dark Overlay
+.services-section {
+  position: relative;
+  background: url("../../assets/specials-parralax.webp") no-repeat center center fixed;
+  background-size: cover;
+  padding: 80px 0;
+  text-align: center;
+  color: white;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7); // Dark overlay
+    z-index: 1;
+  }
+
+  .container {
+    position: relative;
+    z-index: 2;
+  }
+
+  .section-title {
+    font-size: 36px;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 40px;
+  }
+
+}
+
+// Clickable Service Cards with Responsive Design
+.service-card {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  border-radius: 10px;
+  transition: transform 0.3s ease-in-out;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.8); // Stronger shadow for depth
+  border: none; // Remove unwanted border
+  background-clip: padding-box; // Fixes white border on rounded corners
+  background-color: #000;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+
+  .card-img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+    filter: brightness(0.8); // Darkens the image slightly for better contrast
+  }
+
+  .card-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 15px;
+    text-align: center;
+    border-radius: 0 0 10px 10px;
+
+    h3 {
+      margin: 0;
+      font-size: 22px;
+      font-weight: bold;
+      color: white;
+    }
+  }
+}
+
+// Icon Box Styling
+.choose-icon {
+  width: 100px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.2); // Light grey transparent background
+  margin: 0 auto 15px;
+  margin-top: 40px;
+  transition: transform 0.3s ease-in-out;
+  
+  &:hover {
+    transform: scale(1.1);
+  }
+
+  i {
+    font-size: 40px;
+    color: white;
+  }
+}
+
+// Responsive Adjustments for Mobile Layout
+@media (max-width: 768px) {
+  .row-cols-md-3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .service-card {
+    width: 90%; // Make cards take up most of the width on smaller screens
+    margin-bottom: 20px;
+
+    &:hover {
+      transform: none;
+    }
+  }
+}
+
+i{
+  font-size: 75px;
+}

@@ -1,0 +1,64 @@
+h3 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 1rem;
+  }
+  
+  h4 {
+    font-size: 1.25rem;
+    color: #555;
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  ul li {
+    margin-bottom: 0.25rem;
+  }
+  
+  p {
+    margin-bottom: 1rem;
+  }
+  
+  .container {
+    max-width: 960px; /* Adjust the max width as needed */
+  }
+  
+  /* Add or modify your existing CSS with this */
+ul {
+    list-style-type: disc; /* This will create bullets */
+    padding-left: 20px; /* This adds space for bullets */
+  }
+  
+  ul li {
+    margin-bottom: 0.25rem;
+  }
+  
+
+  .card-header {
+    cursor: pointer;
+    user-select: none; /* Prevents text selection */
+  }
+  
+  /* Include styles for your toggle icons here */
+  /* Example: */
+  .card-header::after {
+    content: '\f078'; /* Unicode plus sign */
+    font-family: 'FontAwesome';
+    float: right;
+  }
+  
+  .card-body {
+    border-top: 1px solid #eaeaea;
+  }
+  
+  /* Use the Angular ng-deep combinator to apply styles to dynamically added classes */
+  :host ::ng-deep .card-body:not([hidden]) .card-header::after {
+    content: '\f077'; /* Unicode minus sign */
+    
+  }
+  

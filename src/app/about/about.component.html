@@ -1,0 +1,21 @@
+<app-hero title="FAQ" imageUrl="assets/hero.webp"></app-hero>
+
+
+  <div class="container my-5">
+    <h2 class="text-center mb-5">Sealcoating Frequently Asked Questions</h2>
+    
+    <div *ngFor="let faq of faqs; let i = index">
+      <div class="card">
+        <div class="card-header" (click)="toggle(i)">
+          <h5 class="mb-0">{{ faq.question }}</h5>
+        </div>
+        <div [hidden]="!faq.open" class="card-body">
+          <p>{{ faq.answer }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+  
+  

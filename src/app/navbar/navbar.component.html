@@ -1,0 +1,70 @@
+<header class="navbar">
+    <div class="container">
+        <!-- Logo -->
+        <div class="logo">
+            <img src="assets/logo.png" alt="Logo" id="logo" (click)="route('home')">
+        </div>
+
+        <!-- Navigation Menu -->
+        <nav class="nav-menu">
+            <ul class="nav-links">
+                <li><a (click)="route('home')" class="nav-link">Home</a></li>
+                <li><a (click)="route('specials')" class="nav-link">Specials</a></li>
+                <li><a (click)="route('residential-sealcoating')" class="nav-link">Residential Sealcoating</a></li>
+                <li><a (click)="route('commercial-sealcoating')" class="nav-link">Commercial Sealcoating</a></li>
+                <li><a (click)="route('asphalt-repair')" class="nav-link">Asphalt Repair</a></li>
+                <li><a (click)="route('gallery')" class="nav-link">Portfolio</a></li>
+                <li><a (click)="route('about')" class="nav-link">FAQ</a></li>
+                <li><a (click)="route('contact')" class="nav-link">Contact</a></li>
+            </ul>
+        </nav>
+
+        <!-- Button -->
+        <div class="nav-actions">
+            <button class="btn btn-primary bg-red" (click)="route('estimate')">Request an Estimate</button>
+        </div>
+    </div>
+</header>
+<div class="float-container">
+    <div class="hover-div" (click)="toggleActive(1)" [ngClass]="{ 'active': isActive[1] }">
+        <span class="icons"><i class="bi bi-star-fill"></i></span> <span id="messanger">Read Reviews</span>
+    </div>
+    <div class="hover-div" (click)="toggleActive(2)" [ngClass]="{ 'active': isActive[2] }">
+        <span class="icons"><i class="bi bi-messenger"></i></span> <span id="messanger">Message Us</span>
+    </div>
+    <div class="hover-div" (click)="toggleActive(3)" [ngClass]="{ 'active': isActive[3] }">
+        <span class="icons"><i class="bi bi-envelope"></i></span> <span id="messanger">Email Us</span>
+    </div>
+    <div class="hover-div" (click)="toggleActive(4)" [ngClass]="{ 'active': isActive[4] }">
+        <span class="icons"><i class="bi bi-share-fill"></i> </span> <span id="messanger">Share Us</span>
+    </div>
+</div>
+
+<div class="float-container">
+    <div class="hover-div" (click)="toggleActive(1)" [ngClass]="{ 'active': isActive[1] }">
+        <span class="icons"><i class="bi bi-star-fill"></i></span> <span id="messanger">Read Reviews</span>
+    </div>
+    <div class="hover-div" (click)="toggleActive(2)" [ngClass]="{ 'active': isActive[2] }">
+        <span class="icons"><i class="bi bi-messenger"></i></span> <span id="messanger">Message Us</span>
+    </div>
+    <div class="hover-div" (click)="toggleActive(3)" [ngClass]="{ 'active': isActive[3] }">
+        <span class="icons"><i class="bi bi-envelope"></i></span> <span id="messanger">Email Us</span>
+    </div>
+    <div class="hover-div" (click)="toggleSharePanel()">
+        <span class="icons"><i class="bi bi-share-fill"></i> </span> <span id="messanger">Share Us</span>
+    </div>
+</div>
+<div class="overlay" [ngClass]="{ 'active': showSharePanel }" (click)="toggleSharePanel($event)"></div>
+<div class="share-panel" [ngClass]="{ 'active': showSharePanel }">
+    <div class="close-btn" (click)="toggleSharePanel($event)">&times;</div>
+    <div class="platform" (click)="shareOnFacebook()"><i class="bi bi-facebook"></i></div>
+    <div class="platform" (click)="shareOnTwitter()"><i class="bi bi-twitter"></i></div>
+    <div class="platform" (click)="shareOnLinkedIn()"><i class="bi bi-linkedin"></i></div>
+    <div class="platform" (click)="shareOnReddit()"><i class="bi bi-reddit"></i></div>
+    <div class="platform" (click)="shareOnEmail()"><i class="bi bi-envelope"></i></div>
+</div>
+
+<div class="overlay" [ngClass]="{ 'active': showApptPanel }" (click)="toggleApptPanel($event)"></div>
+<div class="appt-panel" [ngClass]="{ 'active': showApptPanel }">
+    <app-booking></app-booking>
+</div>

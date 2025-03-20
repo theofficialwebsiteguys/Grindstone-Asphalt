@@ -1,0 +1,425 @@
+/* Reset styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.navbar {
+    background-color: white;
+    width: 100%;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Use flexbox to keep all elements in a single row */
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Ensure space between logo, menu, and button */
+    width: 90%;
+    margin: 0 auto;
+    padding: 10px 0;
+}
+
+/* LOGO */
+.logo img {
+    width: 180px;
+    cursor: pointer;
+}
+
+/* NAVIGATION MENU */
+.nav-menu {
+    flex: 1; /* Allows menu to take up remaining space */
+    display: flex;
+    justify-content: center; /* Centers menu */
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.nav-links li {
+    display: inline-block;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: black;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 10px;
+    transition: color 0.3s;
+    cursor: pointer;
+}
+
+.nav-link:hover {
+    color: red;
+}
+
+/* BUTTON STAYS ON THE RIGHT */
+.nav-actions {
+    flex-shrink: 0; /* Prevents the button from shrinking */
+    display: flex;
+    align-items: center;
+}
+
+.btn {
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn-primary {
+    color: white;
+}
+
+
+/* RESPONSIVENESS */
+@media screen and (max-width: 1024px) {
+    .container {
+        flex-wrap: nowrap;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        gap: 10px;
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .nav-menu {
+        width: 100%;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-actions {
+        margin-top: 10px;
+    }
+}
+
+
+.logo-container {
+    text-align: center;
+    margin: 0;
+}
+
+#logo {
+    width: 250px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.request-bar-container {
+    /* background-color: #2c0e3c; */
+    background-image: linear-gradient(90deg, #2e0e3f 0, #15051e 100%) !important;
+    height: 64px;
+    margin: auto;
+}
+
+.request-appt-container {
+    margin: auto;
+}
+
+.request-appt-container button {
+    background-color: #7b4797;
+}
+
+.number-text {
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: bold;
+    margin: auto 0 auto 0;
+    padding: 0 15px 0 0;
+}
+
+.top-btns {
+    border-width: 2px;
+    width: 100%;
+    max-width: 405px;
+    margin: 10px 0 10px 0;
+}
+
+.btn-container {
+    margin: auto;
+    text-align: center;
+
+}
+
+.bar {
+    background-color: white;
+}
+
+.request-appt-container:first-child {
+    text-align: right;
+}
+
+.request-appt-container:last-child {
+    text-align: left;
+}
+
+.social-logos {
+    font-size: 24px;
+    color: #ffffff;
+    padding: 10px
+}
+
+.socials {
+    display: flex;
+    align-items: center;
+}
+
+.phone-email {
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.links {
+    text-decoration: none;
+}
+
+.float-container {
+    /* height: 100px; */
+    height: auto;
+    /* Change this to auto for dynamic height */
+    width: 50px;
+    position: fixed;
+    right: 0;
+    top: 50%;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 10000000;
+}
+
+.hover-div {
+    width: 100%;
+    transition: width 1s;
+    height: 29px;
+    background-image: linear-gradient(90deg,#0f275e 0,#081533 100%)!important;
+    color: rgb(255, 255, 255);
+    overflow: hidden;
+    cursor: pointer;
+    position: relative;
+    border-radius: 1px;
+}
+
+.hover-div span {
+    width: 200px;
+    transition: width 1s;
+    line-height: 0;
+}
+
+.hover-div:hover span {
+    width: 300px;
+}
+
+span {
+    text-align-last: left;
+    width: 50px;
+    padding-right: 19px;
+    padding-left: 19px;
+
+}
+
+.hover-div:hover {
+    width: 300px;
+    /* Set this to the expanded width */
+
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Adjust the alpha value to change darkness */
+    z-index: 999999999;
+    /* Ensure the overlay is above other content */
+    display: none;
+    /* Hide the overlay by default */
+}
+
+.overlay.active {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+.icons {
+    color: white;
+}
+
+.nav-link{
+    cursor: pointer;
+}
+
+.nav-link:hover {
+    color: black;      /* Changes the text color to black */
+    font-weight: bold; /* Makes the text bold */
+}
+
+.share-panel {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #808080;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 1000000000000000;
+    max-width: 300px;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.share-panel.active {
+    /* Adjust opacity to make it visible */
+    opacity: 1;
+}
+
+.appt-panel {
+    width: 90%;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 1000000000000000;
+    max-width: 1000px;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.appt-panel.active {
+    /* Adjust opacity to make it visible */
+    opacity: 1;
+}
+
+
+.platform {
+    cursor: pointer;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+    color: white;
+    background-color: #808080;
+}
+
+.platform:last-child {
+    border-bottom: none;
+}
+
+.platform:hover {
+    background-color: #4f4f4f;
+}
+
+.close-btn {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 18px;
+    color: #bebebe;
+}
+
+.close-btn:hover {
+    color: #333;
+}
+
+.header-hidden {
+    transform: translateY(-100%);
+    opacity: 0;
+    visibility: hidden;
+    transition: transform 0.3s ease-in, opacity 0.3s ease-in, visibility 0.3s ease-in;
+  }
+  
+  .bar {
+    transition: transform 0.3s ease-out, opacity 0.3s ease-out, visibility 0.3s ease-out;
+    will-change: transform, opacity, visibility;
+  }
+  
+
+
+
+
+
+  /* social-bar.component.scss */
+.container-fluid {
+    background-image: linear-gradient(90deg, #2e0e3f 0, #15051e 100%); /* Example color based on the uploaded image */
+  }
+  
+  a.text-light {
+    color: #ffffff;
+  }
+  
+  a.text-light:hover {
+    color: #9f9f9f; /* Lighten the color on hover */
+  }
+  
+  .fa {
+    font-size: 1.2rem; /* Adjust the size of the icons */
+  }
+  
+
+  
+
+  .social-text{
+    font-size: 20px;
+  }
+
+
+  /* Assuming .overlay and .share-panel are your modal elements */
+.overlay, .share-panel {
+    pointer-events: none;  /* Ensures that when hidden, elements cannot be interacted with */
+    transition: all 0.3s;  /* Optional: for smooth transitions */
+}
+
+.overlay.active, .share-panel.active {
+    pointer-events: auto;  /* Allows clicking when the modal is active */
+}
+
+  /* Assuming .overlay and .share-panel are your modal elements */
+  .overlay, .appt-panel {
+    pointer-events: none;  /* Ensures that when hidden, elements cannot be interacted with */
+    transition: all 0.3s;  /* Optional: for smooth transitions */
+}
+
+.overlay.active, .appt-panel.active {
+    pointer-events: auto;  /* Allows clicking when the modal is active */
+}

@@ -1,0 +1,161 @@
+/* Container styles */
+.dmRespColsWrapper {
+    max-width: 75%;
+    margin: 0 auto;
+}
+
+/* Form styles */
+.dmform {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.dmform form {
+    margin: 0 auto;
+}
+
+.dmform label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    ;
+}
+
+.dmform input[type="text"],
+.dmform input[type="email"],
+.dmform input[type="tel"],
+.dmform select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.dmform textarea {
+    width: 100%;
+    height: 150px;
+    /* Increase the height of the textarea */
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.dmform input[type="submit"] {
+    background-color: rgba(123, 71, 151, 1);
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 16px;
+}
+
+.dmform input[type="submit"]:hover {
+    background-color: rgb(104, 60, 128);
+}
+
+/* Success and error message styles (optional) */
+.dmform-success,
+.dmform-error {
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.dmform-success {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+.dmform-error {
+    background-color: #f8d7da;
+    color: #721c24;
+}
+
+.email-phone-services {
+    display: flex;
+
+}
+
+.city-state {
+    display: flex;
+}
+
+.allThree,
+.both {
+    width: 100%;
+    padding-left: 25px;
+}
+
+.allThree:first-child,
+.both:first-child {
+    padding-left: 0;
+}
+
+input,
+textarea,
+select {
+    border-color: rgba(123, 71, 151, 1) !important;
+    background-color: rgba(236, 240, 241, 1)
+}
+
+
+
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 576px) {
+    .email-phone-services,
+    .city-state {
+        flex-direction: column;
+    }
+
+    .allThree,
+    .both {
+        padding-left: 0;
+        width: 100%; /* Ensures that each field takes the full width */
+    }
+}
+
+
+
+.dmform input[type="text"],
+.dmform input[type="email"],
+.dmform input[type="tel"],
+.dmform select,
+.dmform textarea {
+    width: 100%;
+    /* Rest of the styles */
+}
+
+
+@media (max-width: 768px) {
+    .dmRespColsWrapper {
+        max-width: 90%; /* Slightly more width for smaller screens */
+    }
+}
+
+
+@media (max-width: 576px) {
+    .dmform {
+        padding: 15px; /* Less padding on smaller screens */
+    }
+}
+
+
+@media (max-width: 576px) {
+    .dmform input[type="text"],
+    .dmform input[type="email"],
+    .dmform input[type="tel"],
+    .dmform select,
+    .dmform textarea {
+        padding: 12px; /* Larger padding for easier interaction */
+        font-size: 16px; /* Larger font size for readability */
+    }
+}

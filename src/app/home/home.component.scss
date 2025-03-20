@@ -1,0 +1,450 @@
+.content-header {
+  font-size: 30px;
+}
+
+.cards {
+  width: 80%;
+  margin: auto;
+}
+
+.card-title {
+  font-size: 24px;
+}
+
+.btn {
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: all 0.3s ease-in-out;
+}
+
+.card-btn {
+  color: white;
+}
+
+
+.card-text {
+  height: 80px;
+}
+
+/* app-kings-highway-section.component.css */
+.kings-highway-section {
+  position: relative;
+  max-width: 100%;
+  height: auto;
+}
+
+.kings-highway-section img {
+  width: 100%;
+  display: block;
+}
+
+.play-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #000;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  padding: 10px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.play-button span {
+  margin-left: 8px;
+}
+
+
+.video-container {
+  margin: 100px auto 100px auto;
+  width: 65%;
+}
+
+
+.customer-reviews-section {
+  margin: 30px;
+}
+
+.star {
+  color: #ffc834;
+}
+
+.review-background {
+  background-color: rgba(141, 141, 141, 0.103)
+}
+
+.review-img {
+  width: 100%;
+  height: 600px;
+}
+
+@media (max-width: 768px) {
+  .review-img {
+    max-height: 200px; /* Smaller height for smaller screens */
+  }
+}
+
+.review-background {
+  background-color: rgba(141, 141, 141, 0.103);
+  padding: 20px;
+}
+
+
+/* hero */
+
+.mask {
+  background-color: rgb(0, 0, 0, .4);
+  height: 100%;
+  width: 100%;
+}
+
+.btn {
+  border: none;
+  font-size: 24px;
+}
+
+.openStatus {
+  color: #3ac280;
+  font-weight: bold;
+  /* Green color for open status */
+}
+
+.closedStatus {
+  color: red;
+  font-weight: bold;
+  /* Red color for closed status */
+}
+
+.closingSoonStatus {
+  color: orange;
+  font-weight: bold;
+}
+
+.hero-image {
+  height: 70vh;
+  background-size: cover;
+  background-position: center center;
+}
+
+.bold {
+  font-weight: bold;
+
+}
+
+.hero-number{
+  font-size: 36px;
+  font-weight: bold;
+}
+
+.bbb{
+  text-decoration: none;
+  font-size: 18px;
+  color: black;
+  font-weight: bold;
+}
+
+/* CSS */
+@media (max-width: 576px) { /* Adjust for Bootstrap's small breakpoint */
+  .video-container {
+    width: 100% !important; /* Ensures full width on small devices */
+  }
+}
+
+// Hero Section
+.hero-section {
+  display: flex;
+  align-items: center;
+  padding: 150px 0;
+
+  .content-header {
+    font-size: 36px;
+    text-align: left;
+  }
+
+  p {
+    text-align: left;
+    font-size: 18px;
+  }
+
+  .hero-img {
+    width: 100%;
+    height: auto;
+    max-height: 500px;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+}
+
+
+// Services Section with Dark Overlay
+.services-section {
+  position: relative;
+  background: url("../../assets/parralax.webp") no-repeat center center fixed;
+  background-size: cover;
+  padding: 80px 0;
+  text-align: center;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7); // Dark overlay
+    z-index: 1;
+  }
+
+  .container {
+    position: relative;
+    z-index: 2;
+  }
+
+  .section-title {
+    font-size: 36px;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 40px;
+  }
+
+  .highlight {
+    color: red;
+  }
+}
+
+// Clickable Service Cards with Responsive Design
+.service-card {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  border-radius: 10px;
+  transition: transform 0.3s ease-in-out;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.8); // Stronger shadow for depth
+  border: none; // Remove unwanted border
+  background-clip: padding-box; // Fixes white border on rounded corners
+  background-color: #000;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+
+  .card-img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+    filter: brightness(0.8); // Darkens the image slightly for better contrast
+  }
+
+  .card-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 15px;
+    text-align: center;
+    border-radius: 0 0 10px 10px;
+
+    h3 {
+      margin: 0;
+      font-size: 22px;
+      font-weight: bold;
+      color: white;
+    }
+  }
+}
+
+// Responsive Adjustments for Mobile Layout
+@media (max-width: 768px) {
+  .row-cols-md-3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .service-card {
+    width: 90%; // Make cards take up most of the width on smaller screens
+    margin-bottom: 20px;
+
+    &:hover {
+      transform: none;
+    }
+  }
+}
+
+// Custom Section Styling
+.custom-section {
+  padding: 60px 20%;
+}
+
+// Before & After Slider Styling
+.comparison-slider-container {
+  background: white;
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.comparison-slider {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.comparison-img {
+  width: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+// Right Side - Text Box
+.review-background {
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.customer-reviews-section h3 {
+  font-size: 26px;
+  font-weight: bold;
+}
+
+.highlight {
+  color: red;
+}
+
+// Responsive Design
+@media (max-width: 768px) {
+  .custom-section {
+    flex-direction: column;
+  }
+
+  .comparison-slider-container {
+    width: 100%;
+  }
+}
+
+// Review Section Styling
+.review-section {
+  padding: 60px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+// Left Side - Business Info & Call to Action
+.review-info {
+  background-image: linear-gradient(90deg,#0f275e 0,#081533 100%)!important;
+  color: white;
+  padding: 40px;
+  border-radius: 10px;
+  text-align: left;
+
+  .review-title {
+    font-size: 28px;
+    font-weight: bold;
+  }
+
+  .highlight {
+    color: red;
+  }
+
+  .review-description {
+    font-size: 16px;
+    margin: 20px 0;
+  }
+
+  .review-btn {
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: 0.3s ease-in-out;
+
+  }
+}
+
+// Right Side - Review Content (Fixed Size)
+.review-content {
+  background: white;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+  text-align: center;
+  position: relative;
+  min-height: 450px; // Fixed height for consistency
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden; // Prevent shifting
+}
+
+// Review Container with Fixed Height
+#reviews-container {
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+// Individual Review Cards
+.review-card {
+  padding: 20px;
+  border-radius: 10px;
+  opacity: 1;
+  transition: opacity 1s ease-in-out, transform 0.5s ease-in-out;
+  width: 100%;
+  max-width: 500px; // Prevents the review from stretching too wide
+
+  h4 {
+    font-size: 18px;
+    font-weight: bold;
+  }
+
+  .stars {
+    color: #FFD700; // Gold star color
+    margin-bottom: 5px;
+  }
+
+  p {
+    font-size: 16px;
+    color: #333;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+
+// Fade-in and fade-out animations
+.fade-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.fade-out {
+  opacity: 0;
+  transform: translateY(100%);
+}
+
+// Responsive Design
+@media (max-width: 768px) {
+  .review-section {
+    flex-direction: column;
+  }
+
+  .review-info,
+  .review-content {
+    width: 100%;
+    text-align: center;
+  }
+}

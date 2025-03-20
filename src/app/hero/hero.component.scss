@@ -1,0 +1,45 @@
+.mask {
+    background-color: rgb(0, 0, 0, .4);
+    height: 100%;
+    width: 100%;
+}
+
+.btn {
+    border: none;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.openStatus {
+    color: #3ac280;
+    font-weight: bold;
+    /* Green color for open status */
+}
+
+.closedStatus {
+    color: red;
+    font-weight: bold;
+    /* Red color for closed status */
+}
+
+.closingSoonStatus {
+    color: orange;
+    font-weight: bold;
+}
+
+.hero-image {
+    background-image: url('/assets/hero-image.webp');
+    height: 200px;
+    background-size: cover;
+    background-position: center center;
+}
+
+.bold {
+    font-weight: bold;
+
+}
+
+.hero-number{
+    font-size: 36px;
+    font-weight: bold;
+}

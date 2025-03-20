@@ -1,0 +1,115 @@
+.reviews-members .media .mr-3 {
+    width: 56px;
+    height: 56px;
+    object-fit: cover;
+}
+.rounded-pill {
+    border-radius: 50rem!important;
+}
+.total-like-user {
+    border: 2px solid #fff;
+    height: 34px;
+    box-shadow: 0 .125rem .25rem rgba(0, 0, 0, .075)!important;
+    width: 34px;
+}
+.total-like-user-main a {
+    display: inline-block;
+    margin: 0 -17px 0 0;
+}
+.total-like {
+    border: 1px solid;
+    border-radius: 50px;
+    display: inline-block;
+    font-weight: 500;
+    height: 34px;
+    line-height: 33px;
+    padding: 0 13px;
+    vertical-align: top;
+}
+.restaurant-detailed-ratings-and-reviews hr {
+    margin: 0 -24px;
+}
+
+.graph-star-rating{
+    width: 60%;
+    margin: auto;
+    padding: 50px;
+}
+
+.graph-star-rating-header .star-rating {
+    font-size: 17px;
+}
+.progress {
+    background: #f2f4f8 none repeat scroll 0 0;
+    border-radius: 0;
+    height: 30px;
+}
+.rating-list {
+    display: inline-flex;
+    margin-bottom: 15px;
+    width: 100%;
+}
+.rating-list-left {
+    height: 16px;
+    line-height: 29px;
+    width: 10%;
+}
+.rating-list-center {
+    width: 80%;
+}
+.rating-list-right {
+    line-height: 29px;
+    text-align: right;
+    width: 10%;
+}
+.restaurant-slider-pics {
+    bottom: 0;
+    font-size: 12px;
+    left: 0;
+    z-index: 999;
+    padding: 0 10px;
+}
+.restaurant-slider-view-all {
+    bottom: 15px;
+    right: 15px;
+    z-index: 999;
+}
+
+.progress {
+    background: #f2f4f8 none repeat scroll 0 0;
+    border-radius: 0;
+    height: 30px;
+}
+
+
+.progress-bar{
+    background-color: #7b4797;
+}
+
+.star{
+    color: #ffc834;
+}
+
+.reviews-members{
+    max-width: 1000px;
+    margin: auto;
+    padding: 100px;
+}
+
+.btn-container{
+    margin: auto;
+    width: 300px;
+    padding: 50px;
+}
+
+.card-btn {
+    background-color: #7b4797;
+    color: white;
+    border-radius: 2px;
+  }
+  
+  @media (max-width: 576px) {
+    .rating-list-left {
+        width: 40%;
+    }
+}

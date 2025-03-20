@@ -1,0 +1,83 @@
+/* app-footer.component.css */
+.footer {
+    // background-color: #4b3869; /* Adjust the color to match the exact color you need */
+    background-image: linear-gradient(90deg,#0f275e 0,#081533 100%)!important;
+    color: white;
+  }
+  
+  .footer h5 {
+    color: #ffffff;
+    margin-bottom: 15px;
+  }
+  
+  .footer p, .footer ul, .footer li {
+    color: #d3d3d3; /* Lighter grey for text items */
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+  
+  .footer ul {
+    padding-left: 0;
+    list-style: none;
+  }
+  
+
+  .footer-content{
+    margin: auto;
+    width: 70%;
+    text-align: center;
+  }
+
+  .icon{
+    font-size: 28px;
+    margin-bottom: 10px;
+    color: white;
+  }
+
+  .icon-link{
+    color: white;
+    text-decoration: none;
+  }
+
+.phone{
+  text-decoration: none;
+  color: white;
+}
+
+
+  /* footer.component.css */
+.footer2 {
+    font-size: 0.75rem; /* Adjust font size as needed */
+    color: #333; /* Use a dark grey color for text */
+    background-color: #f8f9fa; /* Use a light grey background */
+   
+    border-top: 1px solid #e7e7e7; /* A light border on the top of the footer */
+  }
+  
+  .footer2 a {
+    color: #333; /* Use a dark grey color for links */
+    text-decoration: none; /* No underline */
+    padding: 0 5px; /* Spacing between links */
+  }
+  
+  .footer2 a:hover {
+    text-decoration: underline; /* Underline on hover */
+  }
+  
+  /* Adjust the breakpoints as needed for responsive design */
+  @media (max-width: 768px) {
+    .footer2 a {
+      display: block; /* Stack links vertically on smaller screens */
+      padding: 3px 0; /* Adjust vertical padding for stacked links */
+    }
+    
+    .footer2 span {
+      display: block; /* Put copyright notice on its own line on smaller screens */
+      padding-top: 5px; /* Add some padding above the copyright notice */
+    }
+  }
+  
+
+  .social-container{
+    font-size: 32px;
+  }

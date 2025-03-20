@@ -1,0 +1,170 @@
+<!-- <app-hero title="Exceptional Asphalt Paving Services" imageUrl="assets/hero-image.webp"></app-hero> -->
+
+<div class="text-center bg-image rounded-3 hero-image" [style.background-image]="'url(' + imageUrl + ')'">
+  <div class="mask">
+      <div class="d-flex justify-content-center align-items-center h-100">
+          <div class="text-white m-5">
+              <h1 class="mb-3">Welcome to Grindstone Sealcoating</h1>
+              <p class="mb-3">Free Estimates | Commited to Excellence
+              </p>
+              <p class="hero-number">(774) 922-3911</p>
+              <p class="mb-3 openHours">
+                  <span class="bold">Hours:</span>
+                  <span class="status bold"
+                      [ngClass]="{ 'openStatus': isOpen, 'closedStatus': !isOpen, 'closingSoonStatus' : isClosingSoon}">{{isOpen
+                      ?' Open' : isClosingSoon ? ' Closing soon' : ' Closed' }}</span>
+                  <span class="bold">{{ openingTime }}</span>
+              </p>
+              <div class="nav-actions">
+                <button class="btn btn-primary bg-red">Get A Quote</button>
+            </div>
+          </div>
+      </div>
+  </div>
+</div>
+
+<div class="hero-section container">
+    <div class="row align-items-center">
+        <div class="col-md-6 text-left">
+            <h1 class="display-4 fw-bold content-header mb-4"><span class="red">Reliable Asphalt Maintenance</span> for Homes & Businesses</h1>
+            <p class="lead">At Grindstone Sealcoating, we provide expert asphalt maintenance and sealcoating services throughout Central Massachusetts. Our skilled team specializes in sealcoating, asphalt repairs, and patchwork, delivering high-quality results for both residential and commercial properties.</p>
+            <p class="lead">We are dedicated to precision, efficiency, and customer satisfaction, ensuring every project is completed on time and within budget. Get in touch with our team today to discuss your project and experience the Grindstone Sealcoating commitment to excellence.</p>
+        </div>
+        <div class="col-md-6">
+            <img src="assets/sign.webp" alt="Asphalt Maintenance" class="img-fluid hero-img">
+        </div>
+    </div>
+</div>
+
+<!-- Services Section with Clickable Cards -->
+<div class="services-section">
+    <div class="container">
+        <h2 class="text-center section-title">Our <span class="highlight">Asphalt Services</span></h2>
+        <div class="row row-cols-1 row-cols-md-3 text-center">
+            <div class="col mb-4">
+                <a href="asphalt-services" class="card service-card">
+                    <img src="assets/sealcoating.webp" alt="Sealcoating" class="card-img">
+                    <div class="card-overlay">
+                        <h3 class="card-title">Sealcoating</h3>
+                    </div>
+                </a>
+            </div>
+            <div class="col mb-4">
+                <a href="asphalt-services" class="card service-card">
+                    <img src="assets/asphalt.webp" alt="Asphalt Repair" class="card-img">
+                    <div class="card-overlay">
+                        <h3 class="card-title">Asphalt Repair</h3>
+                    </div>
+                </a>
+            </div>
+            <div class="col mb-4">
+                <a href="asphalt-services" class="card service-card">
+                    <img src="assets/line-striping.webp" alt="Line Striping" class="card-img">
+                    <div class="card-overlay">
+                        <h3 class="card-title">Line Striping</h3>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+  <!-- <div class="ratio ratio-16x9 video-container">
+    <iframe src="assets/kings-highway-asphalt-video.mp4" title="YouTube video" allowfullscreen></iframe>
+  </div> -->
+
+<!-- video-player.component.html -->
+
+<h1 class="display-4 fw-bold content-header mt-5 mb-2 text-center">Why Choose <span class="red">Grindstone Sealcoating?</span></h1>
+<p class="lead m-auto text-center w-50">At Grindstone Sealcoating, our commitment to quality and customer satisfaction sets us apart. We take a hands-on approach to every project, delivering exceptional service with attention to detail and long-lasting results. Your pavement deserves the best, and we're here to make sure it stays protected and looking great.</p>
+  <div class="row g-0 overflow-hidden flex-md-row align-items-center h-md-250 position-relative custom-section">
+
+    <!-- Left Side - Before & After Slider -->
+    <div class="col-lg-6 col-md-5 d-none d-md-block">
+        <div class="comparison-slider-container">
+            <img slot="second" src="assets/before-after.webp" class="comparison-img"/>
+            <!-- <img-comparison-slider class="comparison-slider">
+                <img slot="first" src="assets/Shed/IMG_1459.jpg" class="comparison-img"/>
+                <img slot="second" src="assets/Shed/IMG_1525.jpg" class="comparison-img"/>
+            </img-comparison-slider> -->
+        </div>
+    </div>
+
+    <!-- Right Side - Text Content -->
+    <div class="col-lg-6 col-md-7 p-4 d-flex flex-column position-static review-background">
+        <div class="customer-reviews-section">
+            <h3 class="d-inline-block mb-4">Precision <span class="red">& Care</span></h3>
+            <p class="mb-auto">At Grindstone Sealcoating, we believe excellence is in the details. We don’t just complete a job—we ensure it’s done right, with precision and care. Every project we take on is handled with a focus on protecting your property and its surroundings.</p>
+            <br>
+            <p class="mb-auto">Our experienced team follows meticulous processes to deliver high-quality results while preventing any potential damage. From start to finish, we prioritize safety, durability, and your complete satisfaction.</p>
+        </div>
+    </div>
+
+</div>
+
+<div class="row g-0 overflow-hidden flex-md-row align-items-center h-md-250 position-relative custom-section">
+
+    <!-- Left Side - Business Info & Call to Action -->
+    <div class="col-lg-6 col-md-5 p-4 d-flex flex-column position-static review-info">
+        <h3 class="review-title">Dedicated <span class="red">Customer Care</span></h3>
+        <p class="review-description">
+            Clear communication and transparency are the foundation of our service. We believe an informed customer is a confident one, which is why we take the time to walk you through every step of the process. From your first consultation to the final result, we ensure you understand exactly what to expect.
+        </p>
+        <p class="review-description">
+            Our knowledgeable team is here to answer your questions, explain our techniques, and customize our approach to fit your needs. Your satisfaction is our priority, and we’re committed to delivering not just exceptional results, but also the peace of mind that your property is in expert hands.
+        </p>
+        <a href="https://g.page/YOUR-GOOGLE-BUSINESS-REVIEW-LINK" target="_blank" class="btn review-btn bg-red">Leave a Review</a>
+    </div>
+
+    <!-- Right Side - Animated Reviews -->
+    <div class="col-lg-6 col-md-7 p-4 d-flex flex-column position-static review-content">
+        <div id="reviews-container">
+            <div *ngIf="currentReview" class="review-card" [ngClass]="{'fade-in': isFadingIn, 'fade-out': isFadingOut}">
+                <h4>{{ currentReview.author_name }}</h4>
+                <div class="stars">{{ '⭐'.repeat(currentReview.rating) }}</div>
+                <p>"{{ currentReview.text }}"</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+<div class="row g-0 overflow-hidden flex-md-row align-items-center h-md-250 position-relative custom-section">
+
+    
+    <!-- Left Side - Before & After Slider -->
+    <div class="col-lg-6 col-md-5 d-none d-md-block">
+        <div class="comparison-slider-container">
+            <img slot="second" src="assets/hardworking.webp" class="comparison-img"/>
+            <!-- <img-comparison-slider class="comparison-slider">
+                <img slot="first" src="assets/Shed/IMG_1459.jpg" class="comparison-img"/>
+                <img slot="second" src="assets/Shed/IMG_1525.jpg" class="comparison-img"/>
+            </img-comparison-slider> -->
+        </div>
+    </div>
+
+    <!-- Right Side - Text Content -->
+    <div class="col-lg-6 col-md-7 p-4 d-flex flex-column position-static review-background">
+        <div class="customer-reviews-section">
+            <h3 class="d-inline-block mb-4"><span class="red">Reliable</span></h3>
+            <p class="mb-auto">At Grindstone Sealcoating, we stand by our word. When we make a commitment to your property, you can trust that we’ll deliver with dedication and integrity. Our reputation is built on reliability, hard work, and a results-driven approach that ensures every project meets the highest standards.</p>
+            <br>
+            <p class="mb-auto">We bring fresh ideas, skilled craftsmanship, and an unwavering work ethic to every job. Our team takes pride in what we do, and that passion is reflected in the quality of our work. When you choose us, you’re choosing a team that goes the extra mile to get the job done right.</p>
+        </div>
+    </div>
+
+</div>
+
+  
+<div class="ratio ratio-16x9 video-container">
+    <!-- <video #videoPlayer controls preload="metadata" (loadedmetadata)="setupInitialFrame()">
+      <source src="assets/kings-highway-asphalt-video.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video> -->
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/1oYq9vwwkpM?si=zCH2XRECbT94eNb5" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  </div>

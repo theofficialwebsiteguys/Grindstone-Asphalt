@@ -1,0 +1,33 @@
+<app-hero title="Kings Highway Asphalt Gallery" imageUrl="assets/gallery.webp"></app-hero>
+
+<div class="container mt-4">
+    <div class="row text-center">
+      <div class="col-12">
+        <h1 class="mb-5">Residential <span class="red">Projects</span></h1>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-4 mb-3" *ngFor="let image of images">
+        <div class="image-container">
+          <img [src]="image.src" [alt]="image.alt">
+        </div>
+      </div>
+    </div>
+  </div>
+  
+
+  <div class="container mt-4">
+    <div class="row text-center">
+      <div class="col-12">
+        <h1 class="mb-5">Commercial <span class="red">Projects</span></h1>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-4 mb-3" *ngFor="let image of images">
+        <div class="image-container">
+          <img [src]="image.src" [alt]="image.alt">
+        </div>
+      </div>
+    </div>
+  </div>
+  

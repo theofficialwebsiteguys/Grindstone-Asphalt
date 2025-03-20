@@ -1,0 +1,54 @@
+
+<div *ngIf="!apptBooked" class="container mt-3">
+    <div class="row">
+      <div class="col-md-8 offset-md-2">
+        <form (ngSubmit)="onSubmit()" #bookingForm="ngForm">
+            <div class="row">
+                <div class="col">
+                    <div class="mb-3">
+                        <label for="firstName">First Name</label>
+                        <input  [(ngModel)]="formModel.firstName" type="text" class="form-control" id="firstName" name="firstName" required>
+                      </div>
+                </div>
+                <div class="col">
+                    <div class="mb-3">
+                        <label for="lastName">Last Name</label>
+                        <input  [(ngModel)]="formModel.lastName" type="text" class="form-control" id="lastName" name="lastName" required>
+                      </div>
+                </div>
+            </div>
+
+          <div class="mb-3">
+            <label for="email">Email</label>
+            <input [(ngModel)]="formModel.email" type="email" class="form-control" id="email" name="email" required>
+          </div>
+          <div class="mb-3">
+            <label for="phone">Phone Number</label>
+            <input [(ngModel)]="formModel.phone" type="tel" class="form-control" id="phone" name="phone" required>
+          </div>
+
+          <div class="mb-3 row">
+            <div class="col-sm-8">
+              <select [(ngModel)]="formModel.bookingOption" class="form-select" name="bookingOption" id="booking-select" required>
+                <option [value]="''" disabled hidden selected>Select a service...</option> <!-- Default placeholder -->
+                <option *ngFor="let option of services" [value]="option">
+                  {{ option }}
+                </option>
+              </select>
+            </div>
+          </div>
+          
+          <input [(ngModel)]="formModel.appointmentDate" type="date" class="form-control" id="appointmentDate" name="appointmentDate" required>
+
+          <button type="submit" class="card-btn btn mt-5">Book Now</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  
+
+  <div *ngIf="apptBooked" class="container mt-3">
+    <h1>Appointment Successfully Booked!</h1>
+    <p>Thank you for booking with us.</p>
+  </div>
+
