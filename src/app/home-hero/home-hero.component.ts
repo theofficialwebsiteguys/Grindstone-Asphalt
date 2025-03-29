@@ -21,13 +21,13 @@ export class HomeHeroComponent {
 
   
   images: string[] = [
-    '../../assets/hero.webp',
-    '../../assets/Residential/1.webp',
-    '../../assets/Residential/24.webp',
-    '../../assets/Residential/27.webp',
-    '../../assets/Commercial/1.webp',
-    '../../assets/Commercial/10.webp',
-    '../../assets/Commercial/17.webp'
+    'assets/hero.webp',
+    'assets/Residential/1.webp',
+    'assets/Residential/24.webp',
+    'assets/Residential/27.webp',
+    'assets/Commercial/1.webp',
+    'assets/Commercial/10.webp',
+    'assets/Commercial/17.webp'
   ];
   currentIndex: number = 0;
   intervalId: any;
