@@ -5,7 +5,6 @@
             <img src="assets/logo.png" alt="Logo" id="logo" (click)="route('home')">
         </div>
 
-        <!-- Navigation Menu -->
         <nav class="nav-menu">
             <ul class="nav-links">
                 <li><a (click)="route('home')" class="nav-link">Home</a></li>
@@ -13,47 +12,80 @@
                 <li><a (click)="route('residential-sealcoating')" class="nav-link">Residential Sealcoating</a></li>
                 <li><a (click)="route('commercial-sealcoating')" class="nav-link">Commercial Sealcoating</a></li>
                 <li><a (click)="route('asphalt-repair')" class="nav-link">Asphalt Repair</a></li>
+                <li><a (click)="route('line-striping')" class="nav-link">Line Striping</a></li>
                 <li><a (click)="route('gallery')" class="nav-link">Portfolio</a></li>
                 <li><a (click)="route('about')" class="nav-link">FAQ</a></li>
                 <li><a (click)="route('contact')" class="nav-link">Contact</a></li>
             </ul>
         </nav>
 
+        <!-- Navigation Menu -->
+<!-- Mobile Side Nav Overlay -->
+<div class="mobile-nav-overlay" [ngClass]="{ 'open': mobileMenuOpen }" (click)="toggleMobileMenu()"></div>
+
+<!-- Sliding Side Menu -->
+<aside class="mobile-nav-panel" [ngClass]="{ 'open': mobileMenuOpen }">
+  <div class="close-btn" (click)="toggleMobileMenu()">&times;</div>
+  <ul class="nav-links">
+    <li><a (click)="route('home')" class="nav-link">Home</a></li>
+    <li><a (click)="route('specials')" class="nav-link">Specials</a></li>
+    <li><a (click)="route('residential-sealcoating')" class="nav-link">Residential Sealcoating</a></li>
+    <li><a (click)="route('commercial-sealcoating')" class="nav-link">Commercial Sealcoating</a></li>
+    <li><a (click)="route('asphalt-repair')" class="nav-link">Asphalt Repair</a></li>
+    <li><a (click)="route('line-striping')" class="nav-link">Line Striping</a></li>
+    <li><a (click)="route('gallery')" class="nav-link">Portfolio</a></li>
+    <li><a (click)="route('about')" class="nav-link">FAQ</a></li>
+    <li><a (click)="route('contact')" class="nav-link">Contact</a></li>
+  </ul>
+</aside>
+
+
+<div class="hamburger" [ngClass]="{ 'hide': mobileMenuOpen }" (click)="toggleMobileMenu()">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+  
         <!-- Button -->
         <div class="nav-actions">
-            <button class="btn btn-primary bg-red" (click)="route('estimate')">Request an Estimate</button>
+            <button class="btn btn-primary bg-red" (click)="toggleActive(1)">Request an Estimate</button>
         </div>
     </div>
 </header>
-<div class="float-container">
+<div class="float-container" [ngClass]="{ 'hide': mobileMenuOpen }">
     <div class="hover-div" (click)="toggleActive(1)" [ngClass]="{ 'active': isActive[1] }">
-        <span class="icons"><i class="bi bi-star-fill"></i></span> <span id="messanger">Read Reviews</span>
+      <span class="icons"><i class="bi bi-calendar-event-fill"></i></span> <span id="messanger">Schedule Now</span>
     </div>
     <div class="hover-div" (click)="toggleActive(2)" [ngClass]="{ 'active': isActive[2] }">
-        <span class="icons"><i class="bi bi-messenger"></i></span> <span id="messanger">Message Us</span>
+      <span class="icons"><i class="bi bi-cash-coin"></i></span> <span id="messanger">Make A Payment</span>
     </div>
     <div class="hover-div" (click)="toggleActive(3)" [ngClass]="{ 'active': isActive[3] }">
-        <span class="icons"><i class="bi bi-envelope"></i></span> <span id="messanger">Email Us</span>
+      <span class="icons"><i class="bi bi-file-earmark-arrow-up-fill"></i></span> <span id="messanger">Send Us A File</span>
     </div>
     <div class="hover-div" (click)="toggleActive(4)" [ngClass]="{ 'active': isActive[4] }">
-        <span class="icons"><i class="bi bi-share-fill"></i> </span> <span id="messanger">Share Us</span>
+      <span class="icons"><i class="bi bi-telephone-fill"></i></span> <span id="messanger">Get In Touch</span>
     </div>
-</div>
+  </div>
+  
+
+<app-jobber-form *ngIf="showJobberModal" (close)="closeJobberModal()" />
+
 
 <div class="float-container">
     <div class="hover-div" (click)="toggleActive(1)" [ngClass]="{ 'active': isActive[1] }">
-        <span class="icons"><i class="bi bi-star-fill"></i></span> <span id="messanger">Read Reviews</span>
-    </div>
-    <div class="hover-div" (click)="toggleActive(2)" [ngClass]="{ 'active': isActive[2] }">
-        <span class="icons"><i class="bi bi-messenger"></i></span> <span id="messanger">Message Us</span>
+      <span class="icons"><i class="bi bi-calendar-event-fill"></i></span> <span id="messanger">Schedule Now</span>
     </div>
     <div class="hover-div" (click)="toggleActive(3)" [ngClass]="{ 'active': isActive[3] }">
-        <span class="icons"><i class="bi bi-envelope"></i></span> <span id="messanger">Email Us</span>
+      <span class="icons"><i class="bi bi-file-earmark-arrow-up-fill"></i></span> <span id="messanger">Send Us A File</span>
     </div>
-    <div class="hover-div" (click)="toggleSharePanel()">
-        <span class="icons"><i class="bi bi-share-fill"></i> </span> <span id="messanger">Share Us</span>
+    <div class="hover-div" (click)="toggleActive(4)" [ngClass]="{ 'active': isActive[4] }">
+      <span class="icons"><i class="bi bi-telephone-fill"></i></span> <span id="messanger">Get In Touch</span>
     </div>
-</div>
+    <div class="hover-div" (click)="toggleActive(5)" [ngClass]="{ 'active': isActive[5] }">
+        <span class="icons"><i class="bi-link-45deg"></i></span> <span id="messanger">Socials</span>
+      </div>
+  </div>
+  
 <div class="overlay" [ngClass]="{ 'active': showSharePanel }" (click)="toggleSharePanel($event)"></div>
 <div class="share-panel" [ngClass]="{ 'active': showSharePanel }">
     <div class="close-btn" (click)="toggleSharePanel($event)">&times;</div>
@@ -68,3 +100,5 @@
 <div class="appt-panel" [ngClass]="{ 'active': showApptPanel }">
     <app-booking></app-booking>
 </div>
+
+<app-socials *ngIf="socialsModalOpen" (close)="closeSocialsModal()"/>

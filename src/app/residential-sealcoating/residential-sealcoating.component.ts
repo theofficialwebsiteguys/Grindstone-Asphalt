@@ -44,21 +44,21 @@ export class ResidentialSealcoatingComponent {
       image: 'assets/hero.webp',
       sections: [
         {
-          title: 'Enhance Your Landscape with a Beautiful Patio Hardscape in Westchester County, NY',
+          title: '',
           description: [
-            'Kings Highway Asphalt will guide you through the sometimes-overwhelming task of planning, and designing a paver walk, wall or patio system for you. They will visit the site and work with you to create a unique design and suggest style and color of stone that best fits your property. We provide complete hardscaping in Westchester County, NY for any home or landscape. Contact us seven days a week for a FREE estimate. '
+           
           ],
           bullets: []
         },
         {
-          title: 'Renovate Existing Patios or Build New in Westchester County, NY',
+          title: '',
           description: [
-            'We can update your existing backyard by designing a new patio or walk, using pavers by Ideal, Techo-Bloc, Unilock, and natural stone products. If you already have a patio, walkway or steps that are in need of renovation, repair or cleaning, we can take a look and provide you with numerous options to help renovate and restore what you already have. We can analyze your existing patio or walk to determine the structural integrity and review the overall appearance. In most cases, if pavers are damaged or stained, they can be fixed or replaced. Call us today to get started!'
+           
           ],
           bullets: []
         },
         {
-          title: 'Hardscaping Services in Westchester County, NY for Entertainment, Beauty, and More',
+          title: '',
           description: [],
           bullets: [
             'Walkways',
@@ -79,9 +79,9 @@ export class ResidentialSealcoatingComponent {
       image: 'assets/retaining-walls.webp',
       sections: [
         {
-          title: 'Retaining Walls in Westchester County, NY ',
+          title: '',
           description: [
-            'Whether you\'re looking to create gorgeous spaces for flower beds or need to prevent soil erosion and control water runoff, you can always count on Kings Highway for the best in retaining wall design and installation services for your landscape. Our contractors have 25 years of masonry experience for all your paver retaining wall needs. Call us today for your free estimate! Se habla Español!'
+            ''
           ] ,
           bullets: []
         },

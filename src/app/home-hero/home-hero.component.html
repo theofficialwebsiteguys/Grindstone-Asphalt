@@ -1,0 +1,10 @@
+<section class="hero" role="banner" aria-labelledby="hero-title" [ngStyle]="{'background-image': 'url(' + (singleImage ? singleImage : images[currentIndex]) + ')'}">
+  <div class="overlay" aria-hidden="true"></div>
+  <div class="hero-content">
+    <h1 class="mb-3">Welcome to Grindstone Sealcoating</h1>
+    <p class="mb-3">Free Estimates | Commited to Excellence
+    </p>
+    <p class="hero-number">(774) 922-3911</p>
+    <button class="btn btn-primary bg-red" (click)="toggleActive()">Get A Quote</button>
+  </div>
+</section>

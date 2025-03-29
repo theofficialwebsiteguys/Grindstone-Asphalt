@@ -10,6 +10,7 @@ import { AboutComponent } from './about/about.component';
 import { NgModule } from '@angular/core';
 import { ResidentialSealcoatingComponent } from './residential-sealcoating/residential-sealcoating.component';
 import { AsphaltRepairComponent } from './asphalt-repair/asphalt-repair.component';
+import { LineStripingComponent } from './line-striping/line-striping.component';
 
 export const routes: Routes = [
     { path: 'home', component: HomeComponent },
@@ -22,6 +23,7 @@ export const routes: Routes = [
     { path: 'contact', component: ContactComponent },
     { path: 'about', component: AboutComponent },
     { path: 'estimate', component: EstimateComponent },
+    { path: 'line-striping', component: LineStripingComponent },
     { path: '', redirectTo: '/home', pathMatch: 'full' }, // Redirect to /home
     { path: '**', redirectTo: '/home' } // Wildcard route for a 404 page, redirected to /home
     ];

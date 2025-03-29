@@ -2,6 +2,8 @@ import { Component, ElementRef, HostListener, Renderer2 } from '@angular/core';
 import { Router } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { BookingComponent } from '../booking/booking.component';
+import { JobberFormComponent } from '../jobber-form/jobber-form.component';
+import { SocialsComponent } from '../socials/socials.component';
 
 interface IsActiveMap {
   [key: number]: boolean;
@@ -10,7 +12,7 @@ interface IsActiveMap {
 @Component({
   selector: 'app-navbar',
   standalone: true,
-  imports: [CommonModule, BookingComponent],
+  imports: [CommonModule, BookingComponent, JobberFormComponent, SocialsComponent],
   templateUrl: './navbar.component.html',
   styleUrl: './navbar.component.css'
 })
@@ -19,6 +21,7 @@ export class NavbarComponent {
   private isHeaderHidden = false;
   private navbarHeight: number;
   private scrollOffset = 100; // Additional scroll offset in pixels
+  showJobberModal = false;
 
   constructor(private router: Router, private renderer: Renderer2, private el: ElementRef) {
     this.navbarHeight = 0;
@@ -29,10 +32,12 @@ export class NavbarComponent {
   }
 
   route(page: string) {
-    this.router.navigate(['/' + page]);
+    this.router.navigate(['/' + page]).then(() => {
+      this.mobileMenuOpen = false;
+      document.body.style.overflow = ''; // Ensure scrolling is re-enabled
+    });
   }
   
-
   isActive: IsActiveMap = {
     1: false,
     2: false,
@@ -42,28 +47,26 @@ export class NavbarComponent {
 
   showSharePanel = false;
   showApptPanel = false;
-
+  mobileMenuOpen = false;
+  socialsModalOpen: boolean = false;
   toggleActive(divNumber: number) {
-    switch (divNumber) {
-      case 1:
-        // Redirect to the URL for reading reviews
-        this.router.navigateByUrl('/reviews');
-        break;
-      case 2:
-        // Redirect to the URL for messaging
-        window.open('https://www.messenger.com/login.php?next=https%3A%2F%2Fwww.messenger.com%2Ft%2F104991507892332%2F%3Fmessaging_source%3Dsource%253Apages%253Amessage_shortlink%26source_id%3D1441792%26recurring_notification%3D0', '_blank');
-        break;
-      case 3:
-        // Redirect to the URL for emailing
-        window.open('mailto:julio@kingshighwayasphalt.net?subject=Questions About Your Business&body=');
-        break;
-      case 4:
-        // Redirect to the URL for sharing
-        this.toggleSharePanel()
-        break;
-      default:
-        break;
+    this.isActive[divNumber] = !this.isActive[divNumber];
+
+    if ([1, 2].includes(divNumber)) {
+      this.showJobberModal = true;
+    } else if ([3, 4].includes(divNumber)) {
+      this.router.navigateByUrl('/contact');
+    } else if (divNumber === 5) {
+      this.socialsModalOpen = true;
     }
+  }
+
+  closeSocialsModal(): void {
+    this.socialsModalOpen = false;
+  }
+
+  closeJobberModal() {
+    this.showJobberModal = false;
   }
 
   toggleSharePanel(event?: MouseEvent) {
@@ -147,5 +150,25 @@ export class NavbarComponent {
     this.lastScrollTop = currentScrollTop;
   }
 
+  toggleMobileMenu() {
+    this.mobileMenuOpen = !this.mobileMenuOpen;
+  
+    if (this.mobileMenuOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+  }
+  
+  
+  
+
+  navigateAndClose(page: string) {
+    this.route(page);
+    this.mobileMenuOpen = false;
+
+    // Re-enable scrolling when navigating
+    document.body.style.overflow = '';
+  }
 }
 

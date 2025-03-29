@@ -1,49 +1,84 @@
-<app-hero title="Contact Kings Highway Asphalt" imageUrl="assets/hero.webp"></app-hero>
-<!-- contact.component.html -->
-<div class="container">
-    <div class="row">
-      <div class="col-md-2"></div>
-      <div class="col-md-6 p-5">
-        <h2>Send Us a Message</h2>
-        <p>Please fill out this short form and we'll contact you shortly.</p>
-        <form>
-          <div class="mb-3">
-            <label for="name" class="form-label">Name:</label>
-            <input type="text" class="form-control" id="name" placeholder="Your Name">
-          </div>
-          <div class="mb-3">
-            <label for="email" class="form-label">Email:</label>
-            <input type="email" class="form-control" id="email" placeholder="Your Email">
-          </div>
-          <div class="mb-3">
-            <label for="phone" class="form-label">Phone:</label>
-            <input type="tel" class="form-control" id="phone" placeholder="Your Phone Number">
-          </div>
-          <div class="mb-3">
-            <label for="message" class="form-label">Message:</label>
-            <textarea class="form-control" id="message" rows="3"></textarea>
-          </div>
-          <button type="submit" class="btn">Send Us a Message</button>
-        </form>
+<app-hero title="Contact Grindstone Asphalt" imageUrl="assets/hero.webp"></app-hero>
+
+
+<div class="container my-5">
+
+  <div class="text-center mb-4">
+    <h2 class="fw-bold">Get In <span class="text-danger">Touch</span></h2>
+    <div class="row text-center mb-4 mt-3">
+      <div class="col-md-4">
+        <h6 class="fw-bold">LOCATION</h6>
+        <p>Brookfield, MA 01506</p>
       </div>
-      <div class="info col-md-3 pt-4 text-center">
-        <div class="service-area mt-5 mb-4">
-          <h3>Service Area</h3>
-          <p class="m-0">Brookfield, MA 01506</p>
-          <p class="m-0"><strong>Main:</strong> (774) 922-3911</p>
-        </div>
-        <div class="business-hours">
-          <h3>Business Hours</h3>
-          <p>Mon - Fri: 6:30 am - 8:00 pm</p>
-          <p>Sat - Sun: 8:00 am - 6:00 pm</p>
-        </div>
-        <div class="social-icons mb-4">
-          <a href="#" class="me-2"><i class="fab fa-facebook icon"></i></a>
-          <a href="#" class="me-2"><i class="fab fa-instagram icon"></i></a>
-          <a href="#" class="me-2"><i class="fab fa-twitter icon"></i></a>
-        </div>
+      <div class="col-md-4">
+        <h6 class="fw-bold">PHONE</h6>
+        <p class="text-danger">(774) 922-3911</p>
       </div>
-      <div class="col-md-2"></div>
+      <div class="col-md-4">
+        <h6 class="fw-bold">BUSINESS HOURS</h6>
+        <p class="m-0">Mon - Fri: 6:30 am – 8:00 pm</p>
+        <p>Sat - Sun: 8:00 am – 6:00 pm</p>
+      </div>
     </div>
   </div>
-  
+  <div class="row justify-content-center">
+    <div class="col-lg-10 p-4 form-wrapper">
+
+
+      <form>
+        <div class="row">
+          <div class="col-md-4 mb-3">
+            <input type="text" class="form-control" placeholder="Name">
+          </div>
+          <div class="col-md-4 mb-3">
+            <input type="email" class="form-control" placeholder="Email">
+          </div>
+          <div class="col-md-4 mb-3">
+            <input type="tel" class="form-control" placeholder="Phone">
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <input type="text" class="form-control" placeholder="Address">
+        </div>
+
+        <div class="mb-3">
+          <select class="form-control">
+            <option disabled selected>What Service Are You Looking For?</option>
+            <option>Residential Sealcoating</option>
+            <option>Commercial Sealcoating</option>
+            <option>Crack Filling</option>
+            <option>Line Striping</option>
+          </select>
+        </div>
+
+        <div class="mb-3">
+          <select class="form-control">
+            <option disabled selected>How did you hear about us? <span class="optional">(Optional)</span></option>
+            <option>Google</option>
+            <option>Facebook</option>
+            <option>Instagram</option>
+            <option>X/Twitter</option>
+            <option>Word of Mouth</option>
+            <option>Yard Sign</option>
+            <option>Billboard</option>
+            <option>Other</option>
+          </select>
+        </div>
+
+        <div class="mb-3">
+          <textarea rows="4" class="form-control" placeholder="Additional Information"></textarea>
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label fw-bold">Upload a File (Optional)</label>
+          <input type="file" class="form-control" name="fileUpload">
+        </div>
+
+        <div class="d-flex align-items-center gap-3">
+          <button type="submit" class="btn btn-danger px-5">Submit</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

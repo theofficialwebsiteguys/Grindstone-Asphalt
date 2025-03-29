@@ -1,0 +1,48 @@
+<!-- Floating Chat Button -->
+<div class="chat-fab" (click)="toggleChat()" aria-label="Open chat assistant" [attr.aria-expanded]="chatOpen">
+  💬
+</div>
+
+<!-- Modal Overlay + Chat Form -->
+<div class="chat-modal-overlay" *ngIf="chatOpen" (click)="toggleChat()" role="dialog" aria-modal="true">
+  <div class="chat-form chat-modal" id="chat-form" (click)="$event.stopPropagation()" tabindex="-1" aria-labelledby="chat-title" aria-describedby="chat-description">
+    <div class="chat-card">
+      <div class="chat-header">
+        <h2 id="chat-title">Need Help?</h2>
+        <button class="close-btn" aria-label="Close chat assistant" (click)="toggleChat()">×</button>
+      </div>
+
+      <div class="chat-body">
+        <p id="chat-description" class="sr-only">
+          Enter your name, email, and message in the fields below, then press Send.
+        </p>
+
+        <form (ngSubmit)="sendMessage()">
+          <div class="input-item">
+            <input type="text" [(ngModel)]="formData.name" name="name" placeholder="Your Name" required />
+          </div>
+
+          <div class="input-item">
+            <input type="phone" [(ngModel)]="formData.phone" name="phone" placeholder="Your Phone" required />
+          </div>
+
+          <div class="input-item">
+            <input type="email" [(ngModel)]="formData.email" name="email" placeholder="Your Email" required />
+          </div>
+
+          <div class="input-item">
+            <textarea [(ngModel)]="formData.message" name="message" placeholder="Your Message" required></textarea>
+          </div>
+
+          <div class="input-item">
+            <label class="form-label fw-bold">Attach a file (optional)</label>
+            <input type="file" name="fileUpload" (change)="onFileSelected($event)" />
+          </div>
+          
+
+          <button type="submit" class="send-btn">Send</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

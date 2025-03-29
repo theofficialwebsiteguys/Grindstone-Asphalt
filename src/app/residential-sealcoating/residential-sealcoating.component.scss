@@ -49,6 +49,11 @@
     z-index: 2;
   }
 
+  .lead{
+    width: 80%;
+  }
+  
+
   .section-title {
     font-size: 36px;
     font-weight: bold;
@@ -139,6 +144,10 @@
     &:hover {
       transform: none;
     }
+  }
+
+  .custom-section {
+    padding: 60px 5%;
   }
 }
 

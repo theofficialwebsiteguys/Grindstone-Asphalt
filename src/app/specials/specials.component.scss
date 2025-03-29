@@ -1,7 +1,7 @@
 
 // Custom Section Styling
 .custom-section {
-  padding: 60px 20%;
+  padding: 60px 5%;
 }
 
 // Before & After Slider Styling
@@ -22,6 +22,10 @@
   width: 100%;
   object-fit: cover;
   border-radius: 10px;
+}
+
+.lead{
+  width: 80%;
 }
 
 // Services Section with Dark Overlay
@@ -101,6 +105,10 @@
   }
 }
 
+.btn{
+  font-size: 26px;
+}
+
 // Responsive Adjustments for Mobile Layout
 @media (max-width: 768px) {
   .row-cols-md-3 {
@@ -116,5 +124,21 @@
     &:hover {
       transform: none;
     }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .comparison-slider-container iframe {
+    border: none !important;
+    outline: none;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .comparison-slider-container iframe {
+    width: 100% !important;
+    height: auto;
+    aspect-ratio: 9 / 16;
+    border: none !important;
   }
 }

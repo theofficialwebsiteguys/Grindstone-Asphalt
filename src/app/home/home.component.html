@@ -1,6 +1,5 @@
-<!-- <app-hero title="Exceptional Asphalt Paving Services" imageUrl="assets/hero-image.webp"></app-hero> -->
-
-<div class="text-center bg-image rounded-3 hero-image" [style.background-image]="'url(' + imageUrl + ')'">
+<app-home-hero></app-home-hero>
+<!-- <div class="text-center bg-image hero-image" [style.background-image]="'url(' + imageUrl + ')'">
   <div class="mask">
       <div class="d-flex justify-content-center align-items-center h-100">
           <div class="text-white m-5">
@@ -8,7 +7,7 @@
               <p class="mb-3">Free Estimates | Commited to Excellence
               </p>
               <p class="hero-number">(774) 922-3911</p>
-              <p class="mb-3 openHours">
+               <p class="mb-3 openHours">
                   <span class="bold">Hours:</span>
                   <span class="status bold"
                       [ngClass]="{ 'openStatus': isOpen, 'closedStatus': !isOpen, 'closingSoonStatus' : isClosingSoon}">{{isOpen
@@ -16,12 +15,13 @@
                   <span class="bold">{{ openingTime }}</span>
               </p>
               <div class="nav-actions">
-                <button class="btn btn-primary bg-red">Get A Quote</button>
+                <button class="btn btn-primary bg-red" (click)="toggleActive()">Get A Quote</button>
             </div>
           </div>
       </div>
   </div>
-</div>
+</div> -->
+<app-jobber-form *ngIf="showJobberModal" (close)="closeJobberModal()" />
 
 <div class="hero-section container">
     <div class="row align-items-center">
@@ -31,7 +31,7 @@
             <p class="lead">We are dedicated to precision, efficiency, and customer satisfaction, ensuring every project is completed on time and within budget. Get in touch with our team today to discuss your project and experience the Grindstone Sealcoating commitment to excellence.</p>
         </div>
         <div class="col-md-6">
-            <img src="assets/sign.webp" alt="Asphalt Maintenance" class="img-fluid hero-img">
+            <img src="assets/team.jpg" alt="Asphalt Maintenance" class="img-fluid hero-img">
         </div>
     </div>
 </div>
@@ -42,7 +42,7 @@
         <h2 class="text-center section-title">Our <span class="highlight">Asphalt Services</span></h2>
         <div class="row row-cols-1 row-cols-md-3 text-center">
             <div class="col mb-4">
-                <a href="asphalt-services" class="card service-card">
+                <a [routerLink]="'/residential-sealcoating'" class="card service-card">
                     <img src="assets/sealcoating.webp" alt="Sealcoating" class="card-img">
                     <div class="card-overlay">
                         <h3 class="card-title">Sealcoating</h3>
@@ -50,7 +50,7 @@
                 </a>
             </div>
             <div class="col mb-4">
-                <a href="asphalt-services" class="card service-card">
+                <a [routerLink]="'/asphalt-repair'" class="card service-card">
                     <img src="assets/asphalt.webp" alt="Asphalt Repair" class="card-img">
                     <div class="card-overlay">
                         <h3 class="card-title">Asphalt Repair</h3>
@@ -58,7 +58,7 @@
                 </a>
             </div>
             <div class="col mb-4">
-                <a href="asphalt-services" class="card service-card">
+                <a [routerLink]="'/line-striping'" class="card service-card">
                     <img src="assets/line-striping.webp" alt="Line Striping" class="card-img">
                     <div class="card-overlay">
                         <h3 class="card-title">Line Striping</h3>
@@ -78,11 +78,11 @@
 <!-- video-player.component.html -->
 
 <h1 class="display-4 fw-bold content-header mt-5 mb-2 text-center">Why Choose <span class="red">Grindstone Sealcoating?</span></h1>
-<p class="lead m-auto text-center w-50">At Grindstone Sealcoating, our commitment to quality and customer satisfaction sets us apart. We take a hands-on approach to every project, delivering exceptional service with attention to detail and long-lasting results. Your pavement deserves the best, and we're here to make sure it stays protected and looking great.</p>
+<p class="lead m-auto text-center">At Grindstone Sealcoating, our commitment to quality and customer satisfaction sets us apart. We take a hands-on approach to every project, delivering exceptional service with attention to detail and long-lasting results. Your pavement deserves the best, and we're here to make sure it stays protected and looking great.</p>
   <div class="row g-0 overflow-hidden flex-md-row align-items-center h-md-250 position-relative custom-section">
 
     <!-- Left Side - Before & After Slider -->
-    <div class="col-lg-6 col-md-5 d-none d-md-block">
+    <div class="col-lg-6 col-md-5 d-md-block">
         <div class="comparison-slider-container">
             <img slot="second" src="assets/before-after.webp" class="comparison-img"/>
             <!-- <img-comparison-slider class="comparison-slider">
@@ -115,7 +115,7 @@
         <p class="review-description">
             Our knowledgeable team is here to answer your questions, explain our techniques, and customize our approach to fit your needs. Your satisfaction is our priority, and we’re committed to delivering not just exceptional results, but also the peace of mind that your property is in expert hands.
         </p>
-        <a href="https://g.page/YOUR-GOOGLE-BUSINESS-REVIEW-LINK" target="_blank" class="btn review-btn bg-red">Leave a Review</a>
+        <a href="http://search.google.com/local/writereview?placeid=ChIJi5s7hIA2bmIRWZDBdiAQRMk" target="_blank" class="btn review-btn bg-red">Leave a Review</a>
     </div>
 
     <!-- Right Side - Animated Reviews -->
@@ -138,7 +138,7 @@
 
     
     <!-- Left Side - Before & After Slider -->
-    <div class="col-lg-6 col-md-5 d-none d-md-block">
+    <div class="col-lg-6 col-md-5 d-md-block">
         <div class="comparison-slider-container">
             <img slot="second" src="assets/hardworking.webp" class="comparison-img"/>
             <!-- <img-comparison-slider class="comparison-slider">

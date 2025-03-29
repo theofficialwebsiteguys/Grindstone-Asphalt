@@ -45,8 +45,7 @@ export class CommercialSealcoatingComponent {
         {
           title: 'Quality Service of Seal Coating',
           description: [
-            'Seal coating your driveway will extend the life of your driveway and protect your asphalt from premature aging. At Kings Highway Asphalt we will apply a high-grade sealer to protect your driveway from the elements and protect your asphalt from sun, salt, and chemical damage. Nothing extends the lifespan of your driveway quite like our seal coating services!',
-            'Sealers slow the damaging oxidation and improve appearance. Implementing a maintenance program using sealcoating will extend the life of your asphalt surface, including your driveway or parking lot. A regular scheduled sealcoating program every two to three years will more than double the life of your asphalt.'
+          
           ],
           bullets: []
         }

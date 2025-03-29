@@ -1,12 +1,14 @@
 import { CommonModule } from '@angular/common';
 import { Component, CUSTOM_ELEMENTS_SCHEMA, ElementRef, ViewChild } from '@angular/core';
 import { HeroComponent } from '../hero/hero.component';
-import { Router } from '@angular/router';
+import { Router, RouterModule } from '@angular/router';
+import { JobberFormComponent } from '../jobber-form/jobber-form.component';
+import { HomeHeroComponent } from '../home-hero/home-hero.component';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [CommonModule, HeroComponent],
+  imports: [CommonModule, HeroComponent, RouterModule, JobberFormComponent, HomeHeroComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
@@ -28,6 +30,7 @@ export class HomeComponent {
   private apiKey = 'AIzaSyBxwQNsmDYqYus0oxTi8PU9CT1Tt3mF6B4';
   isFadingIn = false;
   isFadingOut = false;
+  showJobberModal = false;
 
   constructor(private router: Router) { }
 
@@ -40,6 +43,14 @@ export class HomeComponent {
     if (video.duration > 1) { // Check if the video is longer than 5 seconds
       video.currentTime = 1; // Seek to 5 seconds
     }
+  }
+
+  toggleActive() {
+    this.showJobberModal = true;
+  }
+
+  closeJobberModal() {
+    this.showJobberModal = false;
   }
 
   ngOnInit() {

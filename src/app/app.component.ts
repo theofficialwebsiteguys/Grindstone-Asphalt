@@ -7,17 +7,18 @@ import { FooterComponent } from './footer/footer.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { filter } from 'rxjs';
 import { SocialBarComponent } from './social-bar/social-bar.component';
+import { AssistantChatComponent } from './assistant-chat/assistant-chat.component';
 
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, NavbarComponent, HeroComponent, HomeComponent, FooterComponent, SocialBarComponent],
+  imports: [RouterOutlet, NavbarComponent, HeroComponent, HomeComponent, FooterComponent, SocialBarComponent, AssistantChatComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
-  title = 'kings-asphalt';
+  title = 'grindstone-asphalt';
 
   constructor(private router: Router) {
     this.router.events.pipe(
