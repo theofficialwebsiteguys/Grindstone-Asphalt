@@ -113,17 +113,16 @@ export class ResidentialSealcoatingComponent {
       image: 'assets/walkways-steps.webp',
       sections: [
         {
-          title: 'Paver Walkways in Westchester County, NY',
+          title: '',
           description: [
-            'Enjoy the outdoors with a new paver patio, walkway, or garden path installed by the experts at Kings Highway. We offer a wide variety of paving stone styles and colors for a unique look for your backyard. Choose from bricks, stones, or pavers from the top brand names like Unilock, Belgard, and Cambridge for amazing results.',
-            'Call us today for a free estimate on your new patio, walkway. We are licensed in Westchester and Rockland Counties. We take pride in being the masonry contractors in Westchester County, NY and the surrounding areas rely on. '
+           
           ] ,
           bullets: []
         },
         {
           title: 'Personalize Your New Walkway With The Best Materials',
           description: [
-            'Let the experts at Kings Highway help design and install your walkway or steps. We have a variety of high-quality materials to choose from that will blend with your existing property seamlessly, including:'
+          
           ],
           bullets: [
             'Concrete pavers',
@@ -152,7 +151,7 @@ export class ResidentialSealcoatingComponent {
         {
           title: 'Masonry Results',
           description: [
-            'Broken or cracked concrete is not only unattractive, but a safety hazard. Kings Highway Asphalt will keep your property safe with outstanding masonry work. We offer a 1-year warranty on residential driveways. Contact us for a FREE estimate today. '
+          
           ],
           bullets: []
         },
