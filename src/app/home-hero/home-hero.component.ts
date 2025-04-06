@@ -1,11 +1,12 @@
 import { CommonModule } from '@angular/common';
 import { Component, Input } from '@angular/core';
 import { RouterModule } from '@angular/router';
+import { JobberFormComponent } from '../jobber-form/jobber-form.component';
 
 @Component({
   standalone: true,
   selector: 'app-home-hero',
-  imports: [CommonModule, RouterModule],
+  imports: [CommonModule, RouterModule, JobberFormComponent],
   templateUrl: './home-hero.component.html',
   styleUrl: './home-hero.component.scss'
 })
@@ -42,6 +43,10 @@ export class HomeHeroComponent {
 
   toggleActive() {
     this.showJobberModal = true;
+  }
+
+  closeJobberModal() {
+    this.showJobberModal = false;
   }
 
   startCarousel(): void {

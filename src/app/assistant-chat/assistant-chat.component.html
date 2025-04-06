@@ -17,7 +17,7 @@
           Enter your name, email, and message in the fields below, then press Send.
         </p>
 
-        <form (ngSubmit)="sendMessage()">
+        <form (ngSubmit)="sendMessage()" #chatForm="ngForm">
           <div class="input-item">
             <input type="text" [(ngModel)]="formData.name" name="name" placeholder="Your Name" required />
           </div>
@@ -36,11 +36,11 @@
 
           <div class="input-item">
             <label class="form-label fw-bold">Attach a file (optional)</label>
-            <input type="file" name="fileUpload" (change)="onFileSelected($event)" />
+            <input type="file" name="fileUpload" id="fileInput" (change)="onFileSelected($event)" />
           </div>
           
 
-          <button type="submit" class="send-btn">Send</button>
+          <button type="submit" class="send-btn btn btn-danger" [disabled]="!chatForm.valid">Send</button>
         </form>
       </div>
     </div>

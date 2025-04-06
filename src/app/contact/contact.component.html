@@ -21,40 +21,41 @@
       </div>
     </div>
   </div>
-  <div class="row justify-content-center">
+  <div id="6ab4598d-6f5c-437d-bf3e-8d78533e1824"></div>
+  <!-- <div class="row justify-content-center">
     <div class="col-lg-10 p-4 form-wrapper">
 
 
-      <form>
+      <form [formGroup]="contactForm" (ngSubmit)="onSubmit()" enctype="multipart/form-data" novalidate>
         <div class="row">
           <div class="col-md-4 mb-3">
-            <input type="text" class="form-control" placeholder="Name">
+            <input type="text" class="form-control" formControlName="name" placeholder="Name">
           </div>
           <div class="col-md-4 mb-3">
-            <input type="email" class="form-control" placeholder="Email">
+            <input type="email" class="form-control" formControlName="email" placeholder="Email">
           </div>
           <div class="col-md-4 mb-3">
-            <input type="tel" class="form-control" placeholder="Phone">
+            <input type="tel" class="form-control" formControlName="phone" placeholder="Phone">
           </div>
         </div>
-
+      
         <div class="mb-3">
-          <input type="text" class="form-control" placeholder="Address">
+          <input type="text" class="form-control" formControlName="address" placeholder="Address">
         </div>
-
+      
         <div class="mb-3">
-          <select class="form-control">
-            <option disabled selected>What Service Are You Looking For?</option>
+          <select class="form-control" formControlName="service">
+            <option value="" disabled selected>What Service Are You Looking For?</option>
             <option>Residential Sealcoating</option>
             <option>Commercial Sealcoating</option>
             <option>Crack Filling</option>
             <option>Line Striping</option>
           </select>
         </div>
-
+      
         <div class="mb-3">
-          <select class="form-control">
-            <option disabled selected>How did you hear about us? <span class="optional">(Optional)</span></option>
+          <select class="form-control" formControlName="heardFrom">
+            <option value="" disabled selected hidden>How did you hear about us?</option>
             <option>Google</option>
             <option>Facebook</option>
             <option>Instagram</option>
@@ -65,20 +66,22 @@
             <option>Other</option>
           </select>
         </div>
-
+        
+      
         <div class="mb-3">
-          <textarea rows="4" class="form-control" placeholder="Additional Information"></textarea>
+          <textarea rows="4" class="form-control" formControlName="additionalInfo" placeholder="Additional Information"></textarea>
         </div>
-
+      
         <div class="mb-3">
           <label class="form-label fw-bold">Upload a File (Optional)</label>
-          <input type="file" class="form-control" name="fileUpload">
+          <input type="file" class="form-control" (change)="onFileChange($event)"   #fileInput>
         </div>
-
+      
         <div class="d-flex align-items-center gap-3">
-          <button type="submit" class="btn btn-danger px-5">Submit</button>
+          <button type="submit" class="btn btn-danger px-5" [disabled]="contactForm.invalid">Submit</button>
         </div>
       </form>
+      
     </div>
-  </div>
+  </div> -->
 </div>

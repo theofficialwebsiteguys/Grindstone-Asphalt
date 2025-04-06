@@ -20,7 +20,7 @@ export class AssistantChatComponent {
     file: null // <-- add this
   };
 
-  constructor() {}
+  constructor(private http: HttpClient) {}
 
   ngOnInit(): void {}
 
@@ -53,16 +53,37 @@ export class AssistantChatComponent {
   }
 
   async sendMessage() {
-    // try {
-    //   await this.settingsService.sendMessage(
-    //     this.formData.name,
-    //     this.formData.email,
-    //     this.formData.message
-    //   );
-    //   this.chatOpen = false;
-    //   console.log('Message sent successfully!');
-    // } catch (error) {
-    //   console.error('Failed to send message:', error);
-    // }
+    const formData = new FormData();
+    formData.append('name', this.formData.name || '');
+    formData.append('email', this.formData.email || '');
+    formData.append('phone', this.formData.phone || '');
+    formData.append('proposal', this.formData.message || ''); // matches the backend's "proposal"
+    formData.append('businessEmail', 'gsealcoating@gmail.com'); // Replace with your target
+  
+    if (this.formData.file) {
+      formData.append('file', this.formData.file);
+    }
+  
+    try {
+      await this.http.post('https://twg-template-submission-92b1532f00c1.herokuapp.com/send-email-universal', formData).toPromise();
+      alert('Message sent!');
+      this.chatOpen = false;
+  
+      // Reset form
+      this.formData = {
+        name: '',
+        email: '',
+        message: '',
+        phone: '',
+        file: null
+      };
+  
+      const fileInput = document.getElementById('fileInput') as HTMLInputElement;
+      if (fileInput) fileInput.value = '';
+    } catch (error) {
+      alert('Failed to send message.');
+      console.error('Failed to send message:', error);
+    }
   }
+  
 }
