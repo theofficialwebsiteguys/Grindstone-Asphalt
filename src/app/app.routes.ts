@@ -11,6 +11,7 @@ import { NgModule } from '@angular/core';
 import { ResidentialSealcoatingComponent } from './residential-sealcoating/residential-sealcoating.component';
 import { AsphaltRepairComponent } from './asphalt-repair/asphalt-repair.component';
 import { LineStripingComponent } from './line-striping/line-striping.component';
+import { FlooringComponent } from './flooring/flooring.component';
 
 export const routes: Routes = [
     { path: 'home', component: HomeComponent },
@@ -24,6 +25,7 @@ export const routes: Routes = [
     { path: 'about', component: AboutComponent },
     { path: 'estimate', component: EstimateComponent },
     { path: 'line-striping', component: LineStripingComponent },
+    { path: 'flooring', component: FlooringComponent },
     { path: '', redirectTo: '/home', pathMatch: 'full' }, // Redirect to /home
     { path: '**', redirectTo: '/home' } // Wildcard route for a 404 page, redirected to /home
     ];
