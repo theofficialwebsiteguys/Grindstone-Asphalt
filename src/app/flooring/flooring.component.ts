@@ -39,8 +39,8 @@ export class FlooringComponent {
   services = [
     {
       index: 0,
-      name: 'Flooring',
-      image: 'assets/hero.webp',
+      name: 'Concrete Floor Coatings',
+      image: 'assets/flooring3.png',
       sections: [
         {
           title: 'Quality Service of Seal Coating',
