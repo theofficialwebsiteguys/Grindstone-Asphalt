@@ -1,16 +1,25 @@
-<section class="hero" role="banner" aria-labelledby="hero-title" [ngStyle]="{'background-image': 'url(' + (singleImage ? singleImage : images[currentIndex]) + ')'}">
+<section class="hero" role="banner" aria-labelledby="hero-title"
+  [ngStyle]="{ 'background-image': 'url(' + (singleImage ? singleImage : images[currentIndex]) + ')' }">
   <div class="overlay" aria-hidden="true"></div>
-  <div class="hero-content">
-    <h1 class="mb-3">Welcome to Grindstone Sealcoating</h1>
-    <p class="mb-3">Free Estimates | Commited to Excellence
+  <div class="hero-content text-center text-white">
+
+    <h1 id="hero-title" class="mb-3">
+      Expert Sealcoating & Asphalt Repair in Central MA
+    </h1>
+
+    <p class="mb-3">
+      Residential & Commercial Pavement Maintenance in Brookfield, Worcester County, and surrounding areas.
     </p>
-    <p class="hero-number">        
+
+    <p class="mb-3">Free Estimates | Committed to Excellence</p>
+
+    <p class="hero-number">
       <a class="phone" href="tel:7749223911">
-          <span>(774) 922-3911</span>
+        <span>(774) 922-3911</span>
       </a>
     </p>
 
-    <button class="btn btn-primary bg-red" (click)="toggleActive()">Get A Quote</button>
+    <button class="btn btn-primary bg-red" (click)="toggleActive()">Get a Free Quote in 24 Hours</button>
   </div>
 </section>
 

@@ -1,21 +1,16 @@
-<app-hero title="FAQ" imageUrl="assets/hero.webp"></app-hero>
+<app-hero title="Sealcoating FAQs - Grindstone Sealcoating" imageUrl="https://storage.googleapis.com/the-website-guys/Grindstone-Asphalt/hero.webp"></app-hero>
 
+<div class="container my-5">
+  <h1 class="text-center mb-5">Sealcoating Frequently Asked Questions</h1>
 
-  <div class="container my-5">
-    <h2 class="text-center mb-5">Sealcoating Frequently Asked Questions</h2>
-    
-    <div *ngFor="let faq of faqs; let i = index">
-      <div class="card">
-        <div class="card-header" (click)="toggle(i)">
-          <h5 class="mb-0">{{ faq.question }}</h5>
-        </div>
-        <div [hidden]="!faq.open" class="card-body">
-          <p>{{ faq.answer }}</p>
-        </div>
+  <div *ngFor="let faq of faqs; let i = index">
+    <div class="card mb-3" role="region" [attr.aria-labelledby]="'faq-' + i">
+      <div class="card-header" (click)="toggle(i)" tabindex="0" role="button" [attr.aria-expanded]="faq.open" [attr.aria-controls]="'faq-body-' + i">
+        <h2 id="faq-{{i}}" class="h5 mb-0">{{ faq.question }}</h2>
+      </div>
+      <div [hidden]="!faq.open" class="card-body" [id]="'faq-body-' + i">
+        <p>{{ faq.answer }}</p>
       </div>
     </div>
   </div>
-
-  
-  
-  
+</div>

@@ -40,7 +40,7 @@ export class FlooringComponent {
     {
       index: 0,
       name: 'Concrete Floor Coatings',
-      image: 'assets/flooring3.png',
+      image: 'https://storage.googleapis.com/the-website-guys/Grindstone-Asphalt/flooring-background.jpg',
       sections: [
         {
           title: 'Quality Service of Seal Coating',
@@ -68,17 +68,17 @@ export class FlooringComponent {
     },
     {
       question: 'How long will the coating last',
-      answer: 'Most projects—like garage floors—can be completed in just one day, thanks to the rapid cure time of polyaspartic/polyurea materials.',
+      answer: 'With proper surface prep and maintenance, polyaspartic/polyurea coatings can last 15–20 years or more, even in high-traffic or extreme-weather environments.',
       open: false
     },
     {
       question: 'Is it slippery when wet?',
-      answer: 'Most projects—like garage floors—can be completed in just one day, thanks to the rapid cure time of polyaspartic/polyurea materials.',
+      answer: 'We add optional anti-slip additives to create a textured surface that improves grip and safety, even in wet or snowy conditions.',
       open: false
     },
     {
       question: 'Can this be applied year-round?',
-      answer: 'Most projects—like garage floors—can be completed in just one day, thanks to the rapid cure time of polyaspartic/polyurea materials.',
+      answer: 'Yes. Unlike epoxy, polyaspartic/polyurea can be applied in a wider range of temperatures, making it ideal for year-round installations—even during New England’s colder months.',
       open: false
     },
     {

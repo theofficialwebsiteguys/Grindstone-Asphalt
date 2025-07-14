@@ -5,12 +5,14 @@ import { ReactiveFormsModule, FormGroup, FormBuilder } from "@angular/forms";
 import { HeroComponent } from "../hero/hero.component";
 import { Validators } from '@angular/forms';
 import { JobberService } from "../jobber.service";
+import { JobberFormComponent } from "../jobber-form/jobber-form.component";
+import { RouterModule } from "@angular/router";
 
 
 @Component({
   selector: 'app-contact',
   standalone: true,
-  imports: [CommonModule, ReactiveFormsModule, HeroComponent],
+  imports: [CommonModule, ReactiveFormsModule, HeroComponent, RouterModule],
   templateUrl: './contact.component.html',
   styleUrl: './contact.component.scss'
 })
@@ -30,6 +32,7 @@ export class ContactComponent {
       additionalInfo: ['', Validators.required]
     });
   }
+  
 
   ngOnInit(): void {
     this.scriptManager.injectJobberForm(
@@ -72,4 +75,6 @@ export class ContactComponent {
       }
     });
   }
+
+
 }

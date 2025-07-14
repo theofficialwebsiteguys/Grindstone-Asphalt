@@ -1,10 +1,11 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { JobberFormComponent } from '../jobber-form/jobber-form.component';
 
 @Component({
   selector: 'app-hero',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, JobberFormComponent],
   templateUrl: './hero.component.html',
   styleUrl: './hero.component.scss'
 })
@@ -14,8 +15,12 @@ export class HeroComponent implements OnInit {
   openingTime: string = '';
 
   @Input() title: string = ''; // Input for title
+  @Input() subTitle?: string = ''; // Input for title
+  @Input() cta?: string = ''; // Input for title
   @Input() imageUrl: string = ''; // Input for image URL
   @Input() width: number = 400; // Input for image URL
+
+  showJobberModal: boolean = false;
 
   ngOnInit() {
     this.updateStatus();
@@ -44,4 +49,13 @@ export class HeroComponent implements OnInit {
       this.openingTime = ` • Opens at ${openingHour}:00 AM`;
     }
   }
+
+  toggleActive() {
+    this.showJobberModal = true;
+  }
+
+  closeJobberModal() {
+    this.showJobberModal = false;
+  }
+
 }

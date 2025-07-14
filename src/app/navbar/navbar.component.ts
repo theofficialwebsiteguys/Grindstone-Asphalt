@@ -1,4 +1,4 @@
-import { Component, ElementRef, HostListener, Renderer2 } from '@angular/core';
+import { Component, ElementRef, HostListener, Renderer2, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { BookingComponent } from '../booking/booking.component';
@@ -17,9 +17,10 @@ interface IsActiveMap {
   styleUrl: './navbar.component.css'
 })
 export class NavbarComponent {
+  @ViewChild('bar') barElement!: ElementRef;
   private lastScrollTop = 0;
   private isHeaderHidden = false;
-  private navbarHeight: number;
+  navbarHeight: number = 0;
   private scrollOffset = 100; // Additional scroll offset in pixels
   showJobberModal = false;
 
@@ -27,8 +28,10 @@ export class NavbarComponent {
     this.navbarHeight = 0;
    }
 
-   ngAfterViewInit() {
-    this.navbarHeight = this.el.nativeElement.querySelector('.bar').offsetHeight;
+  ngAfterViewInit() {
+    if (this.barElement?.nativeElement) {
+        this.navbarHeight = this.barElement.nativeElement.offsetHeight;
+      }
   }
 
   route(page: string) {
@@ -55,7 +58,7 @@ export class NavbarComponent {
     if ([1, 2].includes(divNumber)) {
       this.showJobberModal = true;
     } else if ([3, 4].includes(divNumber)) {
-      this.router.navigateByUrl('/contact');
+      this.router.navigateByUrl('/contact-sealcoating-experts');
     } else if (divNumber === 5) {
       this.socialsModalOpen = true;
     }
@@ -134,21 +137,21 @@ export class NavbarComponent {
 
     if (currentScrollTop > this.lastScrollTop) {
       // Scrolling down
-      if (currentScrollTop > this.lastScrollTop && currentScrollTop > (this.navbarHeight + this.scrollOffset)){
-        this.renderer.addClass(this.el.nativeElement.querySelector('.bar'), 'header-hidden');
+      if (currentScrollTop > this.lastScrollTop && currentScrollTop > (this.navbarHeight + this.scrollOffset)) {
+        this.renderer.addClass(this.barElement.nativeElement, 'header-hidden');
         this.isHeaderHidden = true;
       }
     } else {
       // Scrolling up
       if (this.isHeaderHidden) {
-        this.renderer.removeClass(this.el.nativeElement.querySelector('.bar'), 'header-hidden');
+        this.renderer.removeClass(this.barElement.nativeElement, 'header-hidden');
         this.isHeaderHidden = false;
       }
     }
 
-    // Update lastScrollTop but not before checking the direction
     this.lastScrollTop = currentScrollTop;
   }
+
 
   toggleMobileMenu() {
     this.mobileMenuOpen = !this.mobileMenuOpen;

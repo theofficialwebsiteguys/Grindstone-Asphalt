@@ -51,7 +51,7 @@ export class SpecialsComponent implements OnInit {
     {
       index: 0,
       name: 'Specials',
-      image: 'assets/hero.webp',
+      image: 'https://storage.googleapis.com/the-website-guys/Grindstone-Asphalt/hero.webp',
       sections: [
         {
           title: 'Don\'t Ignore Your Driveway and Other Asphalt Areas',

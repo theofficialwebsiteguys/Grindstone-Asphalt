@@ -20,7 +20,7 @@ export class HomeComponent {
   isClosingSoon: boolean = false;
   openingTime: string = '';
 
-  imageUrl: string = 'assets/hero.webp'
+  imageUrl: string = 'https://storage.googleapis.com/the-website-guys/Grindstone-Asphalt/hero.webp'
 
 
   reviews: any[] = [];

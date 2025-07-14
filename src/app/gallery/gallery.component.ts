@@ -10,56 +10,20 @@ import { CommonModule } from '@angular/common';
   styleUrl: './gallery.component.scss'
 })
 export class GalleryComponent {
-  commercial_images = [
-    { src: 'assets/Commercial/1.webp', alt: 'Description of Image 1' },
-    { src: 'assets/Commercial/2.webp', alt: 'Description of Image 2' },
-    { src: 'assets/Commercial/3.webp', alt: 'Description of Image N' },
-    { src: 'assets/Commercial/4.webp', alt: 'Description of Image N' },
-    { src: 'assets/Commercial/5.webp', alt: 'Description of Image N' },
-    { src: 'assets/Commercial/6.webp', alt: 'Description of Image N' },
-    { src: 'assets/Commercial/7.webp', alt: 'Description of Image N' },
-    { src: 'assets/Commercial/8.webp', alt: 'Description of Image N' },
-    { src: 'assets/Commercial/10.webp', alt: 'Description of Image N' },
-    { src: 'assets/Commercial/11.webp', alt: 'Description of Image N' },
-    { src: 'assets/Commercial/12.webp', alt: 'Description of Image N' },
-    { src: 'assets/Commercial/13.webp', alt: 'Description of Image N' },
-    { src: 'assets/Commercial/14.webp', alt: 'Description of Image N' },
-    { src: 'assets/Commercial/15.webp', alt: 'Description of Image N' },
-    { src: 'assets/Commercial/16.webp', alt: 'Description of Image N' },
-    { src: 'assets/Commercial/17.webp', alt: 'Description of Image N' },
-    { src: 'assets/Commercial/18.webp', alt: 'Description of Image N' },
-    { src: 'assets/Commercial/19.webp', alt: 'Description of Image N' },
-    { src: 'assets/Commercial/20.webp', alt: 'Description of Image N' },
-  ];
+    residential_images: { src: string; alt: string }[] = [];
+  commercial_images: { src: string; alt: string }[] = [];
 
-  residential_images = [
-    { src: 'assets/Residential/1.webp', alt: 'Description of Image 1' },
-    { src: 'assets/Residential/2.webp', alt: 'Description of Image 2' },
-    { src: 'assets/Residential/3.webp', alt: 'Description of Image N' },
-    { src: 'assets/Residential/4.webp', alt: 'Description of Image N' },
-    { src: 'assets/Residential/5.webp', alt: 'Description of Image N' },
-    { src: 'assets/Residential/6.webp', alt: 'Description of Image N' },
-    { src: 'assets/Residential/7.webp', alt: 'Description of Image N' },
-    { src: 'assets/Residential/8.webp', alt: 'Description of Image N' },
-    { src: 'assets/Residential/9.webp', alt: 'Description of Image N' },
-    { src: 'assets/Residential/10.webp', alt: 'Description of Image N' },
-    { src: 'assets/Residential/11.webp', alt: 'Description of Image N' },
-    { src: 'assets/Residential/12.webp', alt: 'Description of Image N' },
-    { src: 'assets/Residential/13.webp', alt: 'Description of Image N' },
-    { src: 'assets/Residential/14.webp', alt: 'Description of Image N' },
-    { src: 'assets/Residential/15.webp', alt: 'Description of Image N' },
-    { src: 'assets/Residential/16.webp', alt: 'Description of Image N' },
-    { src: 'assets/Residential/17.webp', alt: 'Description of Image N' },
-    { src: 'assets/Residential/18.webp', alt: 'Description of Image N' },
-    { src: 'assets/Residential/19.webp', alt: 'Description of Image N' },
-    { src: 'assets/Residential/20.webp', alt: 'Description of Image N' },
-    { src: 'assets/Residential/21.webp', alt: 'Description of Image N' },
-    { src: 'assets/Residential/22.webp', alt: 'Description of Image N' },
-    { src: 'assets/Residential/23.webp', alt: 'Description of Image N' },
-    { src: 'assets/Residential/24.webp', alt: 'Description of Image N' },
-    { src: 'assets/Residential/25.webp', alt: 'Description of Image N' },
-    { src: 'assets/Residential/26.webp', alt: 'Description of Image N' },
-    { src: 'assets/Residential/27.webp', alt: 'Description of Image N' },
-    { src: 'assets/Residential/28.webp', alt: 'Description of Image N' },
-  ];
+  ngOnInit(): void {
+    // Residential: 28 images
+    this.residential_images = Array.from({ length: 28 }, (_, i) => ({
+      src: `https://storage.googleapis.com/the-website-guys/Grindstone-Asphalt/Residential/${i + 1}.webp`,
+      alt: `Residential driveway sealcoating in Brookfield MA – Project ${i + 1}`
+    }));
+
+    // Commercial: 20 images
+    this.commercial_images = Array.from({ length: 20 }, (_, i) => ({
+      src: `https://storage.googleapis.com/the-website-guys/Grindstone-Asphalt/Commercial/${i + 1}.webp`,
+      alt: `Commercial asphalt maintenance in Worcester County MA – Project ${i + 1}`
+    }));
+  }
 }

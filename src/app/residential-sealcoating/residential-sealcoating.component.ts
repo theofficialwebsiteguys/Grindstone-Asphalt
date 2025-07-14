@@ -41,7 +41,7 @@ export class ResidentialSealcoatingComponent {
       index: 0,
       name: 'Residential Sealcoating',
       heroName: 'Patio Design and Installation Contractor',
-      image: 'assets/hero.webp',
+      image: 'https://storage.googleapis.com/the-website-guys/Grindstone-Asphalt/hero.webp',
       sections: [
         {
           title: '',

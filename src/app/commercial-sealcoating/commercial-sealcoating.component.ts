@@ -40,7 +40,7 @@ export class CommercialSealcoatingComponent {
     {
       index: 0,
       name: 'Commercial Sealcoating',
-      image: 'assets/hero.webp',
+      image: 'https://storage.googleapis.com/the-website-guys/Grindstone-Asphalt/hero.webp',
       sections: [
         {
           title: 'Quality Service of Seal Coating',

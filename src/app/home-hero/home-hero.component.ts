@@ -22,13 +22,13 @@ export class HomeHeroComponent {
 
   
   images: string[] = [
-    'assets/hero.webp',
-    'assets/Residential/1.webp',
-    'assets/Residential/24.webp',
-    'assets/Residential/27.webp',
-    'assets/Commercial/1.webp',
-    'assets/Commercial/10.webp',
-    'assets/Commercial/17.webp'
+    'https://storage.googleapis.com/the-website-guys/Grindstone-Asphalt/hero.webp',
+    'https://storage.googleapis.com/the-website-guys/Grindstone-Asphalt/Residential/1.webp',
+    'https://storage.googleapis.com/the-website-guys/Grindstone-Asphalt/Residential/24.webp',
+    'https://storage.googleapis.com/the-website-guys/Grindstone-Asphalt/Residential/27.webp',
+    'https://storage.googleapis.com/the-website-guys/Grindstone-Asphalt/Commercial/1.webp',
+    'https://storage.googleapis.com/the-website-guys/Grindstone-Asphalt/Commercial/10.webp',
+    'https://storage.googleapis.com/the-website-guys/Grindstone-Asphalt/Commercial/17.webp'
   ];
   currentIndex: number = 0;
   intervalId: any;

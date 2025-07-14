@@ -1,23 +1,22 @@
-<header class="navbar">
+<header class="navbar" #bar>
     <div class="container">
         <!-- Logo -->
         <div class="logo">
-            <img src="assets/logo.png" alt="Logo" id="logo" (click)="route('home')">
+            <img src="https://storage.googleapis.com/the-website-guys/Grindstone-Asphalt/logo.png" alt="Logo" id="logo" (click)="route('home')">
         </div>
 
         <nav class="nav-menu">
-            <ul class="nav-links">
-                <li><a (click)="route('home')" class="nav-link">Home</a></li>
-                <li><a (click)="route('specials')" class="nav-link">Specials</a></li>
-                <li><a (click)="route('residential-sealcoating')" class="nav-link">Residential Sealcoating</a></li>
-                <li><a (click)="route('commercial-sealcoating')" class="nav-link">Commercial Sealcoating</a></li>
-                <li><a (click)="route('asphalt-repair')" class="nav-link">Asphalt Repair</a></li>
-                <li><a (click)="route('line-striping')" class="nav-link">Line Striping</a></li>
-                <li><a (click)="route('flooring')" class="nav-link">Flooring</a></li>
-                <li><a (click)="route('gallery')" class="nav-link">Portfolio</a></li>
-                <li><a (click)="route('about')" class="nav-link">FAQ</a></li>
-                <li><a (click)="route('contact')" class="nav-link">Contact</a></li>
-            </ul>
+          <ul class="nav-links">
+            <li><a (click)="route('asphalt-sealcoating-brookfield-ma')" class="nav-link">Home</a></li>
+            <li><a (click)="route('sealcoating-specials-discounts')" class="nav-link">Specials</a></li>
+            <li><a (click)="route('driveway-sealcoating-central-ma')" class="nav-link">Residential Sealcoating</a></li>
+            <li><a (click)="route('parking-lot-sealcoating-brookfield')" class="nav-link">Commercial Sealcoating</a></li>
+            <li><a (click)="route('asphalt-repair-patching-brookfield')" class="nav-link">Asphalt Repair</a></li>
+            <li><a (click)="route('line-striping-parking-lots-ma')" class="nav-link">Line Striping</a></li>
+            <li><a (click)="route('portfolio-before-after-sealcoating')" class="nav-link">Portfolio</a></li>
+            <li><a (click)="route('faq-sealcoating-asphalt-services')" class="nav-link">FAQ</a></li>
+            <li><a (click)="route('contact-sealcoating-experts')" class="nav-link">Contact</a></li>
+          </ul>
         </nav>
 
         <!-- Navigation Menu -->
@@ -28,16 +27,15 @@
 <aside class="mobile-nav-panel" [ngClass]="{ 'open': mobileMenuOpen }">
   <div class="close-btn" (click)="toggleMobileMenu()">&times;</div>
   <ul class="nav-links">
-    <li><a (click)="route('home')" class="nav-link">Home</a></li>
-    <li><a (click)="route('specials')" class="nav-link">Specials</a></li>
-    <li><a (click)="route('residential-sealcoating')" class="nav-link">Residential Sealcoating</a></li>
-    <li><a (click)="route('commercial-sealcoating')" class="nav-link">Commercial Sealcoating</a></li>
-    <li><a (click)="route('asphalt-repair')" class="nav-link">Asphalt Repair</a></li>
-    <li><a (click)="route('line-striping')" class="nav-link">Line Striping</a></li>
-    <li><a (click)="route('flooring')" class="nav-link">Flooring</a></li>
-    <li><a (click)="route('gallery')" class="nav-link">Portfolio</a></li>
-    <li><a (click)="route('about')" class="nav-link">FAQ</a></li>
-    <li><a (click)="route('contact')" class="nav-link">Contact</a></li>
+    <li><a (click)="route('asphalt-sealcoating-brookfield-ma')" class="nav-link">Home</a></li>
+    <li><a (click)="route('sealcoating-specials-discounts')" class="nav-link">Specials</a></li>
+    <li><a (click)="route('driveway-sealcoating-central-ma')" class="nav-link">Residential Sealcoating</a></li>
+    <li><a (click)="route('parking-lot-sealcoating-brookfield')" class="nav-link">Commercial Sealcoating</a></li>
+    <li><a (click)="route('asphalt-repair-patching-brookfield')" class="nav-link">Asphalt Repair</a></li>
+    <li><a (click)="route('line-striping-parking-lots-ma')" class="nav-link">Line Striping</a></li>
+    <li><a (click)="route('portfolio-before-after-sealcoating')" class="nav-link">Portfolio</a></li>
+    <li><a (click)="route('faq-sealcoating-asphalt-services')" class="nav-link">FAQ</a></li>
+    <li><a (click)="route('contact-sealcoating-experts')" class="nav-link">Contact</a></li>
   </ul>
 </aside>
 

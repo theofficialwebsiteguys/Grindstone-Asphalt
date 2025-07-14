@@ -3,7 +3,14 @@
         <div class="d-flex justify-content-center align-items-center h-100">
             <div class="text-white m-5">
                 <h1 class="mb-3">{{ title }}</h1>
+                <p>{{ subTitle }}</p>
+                <button *ngIf="cta" class="btn btn-light px-4 py-2 rounded-pill shadow" (click)=toggleActive()>
+                {{ cta }}
+                </button>
             </div>
         </div>
     </div>
 </div>
+
+
+<app-jobber-form *ngIf="showJobberModal" (close)="closeJobberModal()"></app-jobber-form>
